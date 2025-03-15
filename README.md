@@ -32,3 +32,7 @@ cd kdedots
 sudo ./install.sh
 ./usersetups.sh
 ```
+
+# Weird Reminder
+
+If you want to change your mouse setting on a gpro wirless x superlight you need to plug it in idk why
