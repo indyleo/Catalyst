@@ -1,11 +1,13 @@
 #!/bin/env bash
 
+# Make Sure Script Is Not Run As Root
 if [[ "$(id -u)" -eq 0 ]]; then
     echo "This script cannot be run as root/sudo. Exiting."
     exit 1
 fi
 
-set -euo pipefail  # Exit on error
+set -euo pipefail # Exit on error
+trap 'echo "Error occurred at line $LINENO"' ERR
 
 # Script Variables
 builddir=$(pwd)
@@ -101,18 +103,31 @@ rm -v ~/.bashrc ~/.profile ~/.zshenv ~/.zshrc
 mv -v .profile .zshenv .zshrc .functionrc .aliasrc .xsession .Xresources ~/
 sudo mv -v "$builddir"/xsessionfiles/* /usr/share/xsessions
 
-# Zsh Plugins
-echo "#################"
-echo "## Zsh Plugins ##"
-echo "#################"
+# Zsh Setup
+echo "###############"
+echo "## Zsh Setup ##"
+echo "###############"
 mkdir -pv ~/Zsh-Plugins
 git_clone https://github.com/zsh-users/zsh-history-substring-search.git ~/Zsh-Plugins/zsh-history-substring-search
 git_clone https://github.com/zsh-users/zsh-completions.git ~/Zsh-Plugins/zsh-completions
 git_clone https://github.com/MichaelAquilina/zsh-you-should-use.git ~/Zsh-Plugins/zsh-you-should-use
 git_clone https://github.com/hlissner/zsh-autopair.git ~/Zsh-Plugins/zsh-autopair
 
+# Set zsh as the default login shell
+chsh -s "$(which zsh)" "$USER"
+
 # Add user to libvirt group
 sudo usermod -aG libvirt "$(whoami)"
+
+echo "###############"
+echo "## Tailscale ##"
+echo "###############"
+curl -fsSL https://tailscale.com/install.sh | sh
+
+echo "############"
+echo "## Floorp ##"
+echo "############"
+curl -fsSL https://floorp.app/install.sh | sh
 
 # Flatpak Setup
 echo "##################"
@@ -124,6 +139,7 @@ echo "#####################"
 echo "## Flatpak Install ##"
 echo "#####################"
 flatpak install -y io.github.dweymouth.supersonic com.obsproject.Studio io.github.arunsivaramanneo.GPUViewer org.fedoraproject.MediaWriter com.chatterino.chatterino net.lutris.Lutris \
-    com.github.tchx84.Flatseal org.prismlauncher.PrismLauncher com.heroicgameslauncher.hgl xyz.xclicker.xclicker dev.vencord.Vesktop org.winehq.Wine com.usebottles.bottles net.davidotek.pupgui2
+    com.github.tchx84.Flatseal org.prismlauncher.PrismLauncher com.heroicgameslauncher.hgl xyz.xclicker.xclicker dev.vencord.Vesktop org.winehq.Wine com.usebottles.bottles \
+    com.valvesoftware.steam net.davidotek.pupgui2
 
 echo "Setup complete!"
