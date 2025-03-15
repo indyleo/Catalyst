@@ -53,3 +53,11 @@ elif [[ "$distro" == "arch" ]]; then
         gparted yt-dlp mediainfo ffmpegthumbnailer ffmpeg cava playerctl mpv peek vlc mesa-utils nvidia-driver nvidia-cuda-toolkit nvidia-cuda-dev \
         firmware-misc-nonfree fonts-font-awesome fontconfig fonts-noto fonts-ubuntu fonts-jetbrains-mono
 fi
+
+echo "Packages installed successfully"
+
+echo "Now setting up Sddm theme"
+
+tar -xf Nordic-Plasma-6.tar.xz -C /usr/share/sddm/themes/
+mv -v sddm.conf /etc/sddm.conf
+
