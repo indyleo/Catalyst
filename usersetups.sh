@@ -97,11 +97,24 @@ echo "## Moving, Deleting, And Adding Files ##"
 echo "########################################"
 mkdir -pv ~/.config
 git_clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
-git_clone https://gitlab.com/dwt1/wallpapers.git ~/Pictures/wallpapers/
 mv -v fastfetch git nvim lf tmux alacritty ohmyposh mimeapps.list user-dirs.locale user-dirs.dirs ~/.config/
 rm -v ~/.bashrc ~/.profile ~/.zshenv ~/.zshrc
 mv -v .profile .zshenv .zshrc .functionrc .aliasrc .xsession .Xresources ~/
 sudo mv -v "$builddir"/xsessionfiles/* /usr/share/xsessions
+
+# Cursor Theme
+echo "###################"
+echo "## Cursors Theme ##"
+echo "###################"
+git_clone https://github.com/alvatip/Nordzy-cursors.git ~/Github/Nordzy-cursors
+mv -v ~/Github/Nordzy-cursors/themes/* ~/.local/share/icons
+
+# Icons Theme
+echo "#################"
+echo "## Icons Theme ##"
+echo "#################"
+wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.local/share/icons" sh
+mv -v desktopfiles/* ~/.local/share/icons/Papirus-Dark/128x128/apps
 
 # Zsh Setup
 echo "###############"
