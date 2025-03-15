@@ -142,6 +142,13 @@ echo "## Floorp ##"
 echo "############"
 curl -fsSL https://floorp.app/install.sh | sh
 
+echo "#####################"
+echo "## Via (Keyboard) ##"
+echo "#####################"
+wget https://github.com/the-via/releases/releases/download/v3.0.0/via-3.0.0-linux.AppImage
+chmod a+x via-3.0.0-linux.AppImage
+mv -v via-3.0.0-linux.AppImage ~/Applications
+
 # Flatpak Setup
 echo "##################"
 echo "## Flatpak Repo ##"
