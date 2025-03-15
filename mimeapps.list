@@ -1,0 +1,7 @@
+[Added Associations]
+x-scheme-handler/http=floorp.desktop;
+x-scheme-handler/https=floorp.desktop;
+
+[Default Applications]
+x-scheme-handler/http=floorp.desktop;
+x-scheme-handler/https=floorp.desktop;
