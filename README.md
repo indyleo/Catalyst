@@ -33,6 +33,6 @@ sudo ./install.sh
 ./usersetups.sh
 ```
 
-# Weird Reminder
+# Piper Reminder
 
-If you want to change your mouse setting on a gpro wirless x superlight you need to plug it in idk why
+If you want to change your mouse setting (only if you have a logitech mouse) you need to plug it in to your computer with a cable, you cant just do it wireless.
