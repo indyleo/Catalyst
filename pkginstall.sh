@@ -20,6 +20,12 @@ fi
 # Update the system
 apt update && apt upgrade -y
 
+# Add 32 bit support
+dpkg --add-architecture i386
+
+# Update the pkg list
+apt update
+
 # Install the packages
 apt install -y \
     direnv yad fzf locate gh tree build-essential git cmake make libhidapi-dev gpg openssl tldr trash-cli g++ gcc wget curl \
@@ -31,7 +37,8 @@ apt install -y \
     gparted yt-dlp mediainfo ffmpegthumbnailer ffmpeg cava playerctl mpv peek vlc mesa-utils nvidia-driver nvidia-cuda-toolkit nvidia-cuda-dev \
     firmware-misc-nonfree fonts-font-awesome fontconfig fonts-noto fonts-ubuntu fonts-jetbrains-mono extra-cmake-modules qt6-tools-dev kwin-dev \
     libkf6configwidgets-dev gettext libkf6crash-dev libkf6globalaccel-dev libkf6kio-dev libkf6service-dev libkf6notifications-dev libkf6kcmutils-dev \
-    libkdecorations3-dev libxcb-composite0-dev libxcb-randr0-dev libxcb-shm0-dev
+    libkdecorations3-dev libxcb-composite0-dev libxcb-randr0-dev libxcb-shm0-dev libx11-dev libxext-dev qt6-base-dev qt6-svg-dev libkf6windowsystem-dev \
+    qt6-base-dev-tools
 
 echo "Packages installed successfully"
 

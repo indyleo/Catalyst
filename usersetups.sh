@@ -39,6 +39,7 @@ git_clone https://github.com/indyleo/scripts.git ~/.local/scripts
 git_clone https://github.com/tmux-plugins/tpm.git ~/.tmux/plugins/tpm
 git_clone https://github.com/jesseduffield/lazygit.git ~/Github/lazygit
 git_clone https://github.com/taj-ny/kwin-effects-forceblur.git ~/Github/kwin-effects-forceblur
+git_clone https://github.com/tsujan/Kvantum.git ~/Github/Kvantum
 
 echo "#################"
 echo "## Go Programs ##"
@@ -62,6 +63,16 @@ mkdir build
 cd build
 cmake ../ -DCMAKE_INSTALL_PREFIX=/usr
 make -j
+sudo make install
+cd "$builddir"
+
+echo "###################"
+echo "## Kvantum Theme ##"
+echo "###################"
+cd ~/Github/Kvantum/Kvantum
+mkdir build && cd build
+cmake ..
+make
 sudo make install
 cd "$builddir"
 
