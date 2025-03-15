@@ -122,7 +122,7 @@ shell = "zsh"
 
 [window]
 dynamic_padding = false
-opacity = 1.00
+opacity = 0.85
 title = "Alacritty"
 decorations = "none"
 startup_mode = "Maximized"

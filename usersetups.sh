@@ -38,6 +38,7 @@ git_clone https://github.com/bayasdev/envycontrol.git ~/Github/envycontrol
 git_clone https://github.com/indyleo/scripts.git ~/.local/scripts
 git_clone https://github.com/tmux-plugins/tpm.git ~/.tmux/plugins/tpm
 git_clone https://github.com/jesseduffield/lazygit.git ~/Github/lazygit
+git_clone https://github.com/taj-ny/kwin-effects-forceblur.git ~/Github/kwin-effects-forceblur
 
 echo "#################"
 echo "## Go Programs ##"
@@ -52,6 +53,17 @@ echo "#####################"
 echo "## Python Programs ##"
 echo "#####################"
 pipx installl spotdl
+
+echo "##################"
+echo "## Kwin Effects ##"
+echo "##################"
+cd ~/Github/kwin-effects-forceblur
+mkdir build
+cd build
+cmake ../ -DCMAKE_INSTALL_PREFIX=/usr
+make -j
+sudo make install
+cd "$builddir"
 
 echo "############"
 echo "## Rustup ##"
@@ -100,7 +112,6 @@ git_clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
 mv -v fastfetch git nvim lf tmux alacritty ohmyposh mimeapps.list user-dirs.locale user-dirs.dirs ~/.config/
 rm -v ~/.bashrc ~/.profile ~/.zshenv ~/.zshrc
 mv -v .profile .zshenv .zshrc .functionrc .aliasrc .xsession .Xresources ~/
-sudo mv -v "$builddir"/xsessionfiles/* /usr/share/xsessions
 
 # Cursor Theme
 echo "###################"
@@ -145,11 +156,10 @@ curl -fsSL https://floorp.app/install.sh | sh
 echo "#####################"
 echo "## Via (Keyboard) ##"
 echo "#####################"
-wget https://github.com/the-via/releases/releases/download/v3.0.0/via-3.0.0-linux.AppImage
-chmod a+x via-3.0.0-linux.AppImage
-mv -v via-3.0.0-linux.AppImage ~/Applications
+wget https://github.com/the-via/releases/releases/download/v3.0.0/via-3.0.0-linux.deb
+sudo dpkg -i via-3.0.0-linux.deb
+rm -fv via-3.0.0-linux.deb
 
-# Flatpak Setup
 echo "##################"
 echo "## Flatpak Repo ##"
 echo "##################"
