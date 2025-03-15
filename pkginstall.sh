@@ -51,5 +51,5 @@ elif [[ "$distro" == "arch" ]]; then
         ripgrep fd-find neovim npm flatpak golang-go python3-pip pipx cowsay cmatrix tty-clock lolcat fastfetch htop bash bash-completion \
         openjdk-17-jdk openjdk-17-jre gradle transmission-qt transmission-cli geoip-bin virt-manager xsel alacritty timeshift \
         gparted yt-dlp mediainfo ffmpegthumbnailer ffmpeg cava playerctl mpv peek vlc mesa-utils nvidia-driver nvidia-cuda-toolkit nvidia-cuda-dev \
-        firmware-misc-nonfree fonts-font-awesome fontconfig fonts-noto fonts-ubuntu fonts-jetbrains-mono kvantum
+        firmware-misc-nonfree fonts-font-awesome fontconfig fonts-noto fonts-ubuntu fonts-jetbrains-mono
 fi

@@ -37,7 +37,7 @@ git_clone() {
 git_clone https://github.com/bayasdev/envycontrol.git ~/Github/envycontrol
 git_clone https://github.com/indyleo/scripts.git ~/.local/scripts
 git_clone https://github.com/tmux-plugins/tpm.git ~/.tmux/plugins/tpm
-git_clone git clone https://github.com/jesseduffield/lazygit.git ~/Github/lazygit
+git_clone https://github.com/jesseduffield/lazygit.git ~/Github/lazygit
 
 echo "#################"
 echo "## Go Programs ##"
