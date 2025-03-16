@@ -184,4 +184,6 @@ flatpak install -y io.github.dweymouth.supersonic com.obsproject.Studio io.githu
     com.github.tchx84.Flatseal org.prismlauncher.PrismLauncher com.heroicgameslauncher.hgl xyz.xclicker.xclicker dev.vencord.Vesktop org.winehq.Wine com.usebottles.bottles \
     com.valvesoftware.steam net.davidotek.pupgui2
 
+flatpak install --user https://sober.vinegarhq.org/sober.flatpakref
+
 echo "Setup complete!"
