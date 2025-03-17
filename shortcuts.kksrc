@@ -5,6 +5,11 @@ _launch=Meta+Return
 [dev.vencord.Vesktop.desktop][Global Shortcuts]
 _launch=Meta+D
 
+[floorp.desktop][Global Shortcuts]
+_launch=Meta+B
+new-private-window=Meta+Shift+B
+new-window=Meta+Ctrl+B
+
 [io.github.dweymouth.supersonic.desktop][Global Shortcuts]
 _launch=Meta+M
 
@@ -15,11 +20,42 @@ Cycle Overview Opposite=
 Decrease Opacity=
 Edit Tiles=Meta+T
 Expose=Ctrl+F9
-ExposeAll=Ctrl+F10; Launch (C)
+ExposeAll=Launch (C); Ctrl+F10
 ExposeClass=Ctrl+F7
 ExposeClassCurrentDesktop=
 Grid View=Meta+G
 Increase Opacity=
+KZones: Activate layout 1=Meta+Num+1
+KZones: Activate layout 2=Meta+Num+2
+KZones: Activate layout 3=Meta+Num+3
+KZones: Activate layout 4=Meta+Num+4
+KZones: Activate layout 5=Meta+Num+5
+KZones: Activate layout 6=Meta+Num+6
+KZones: Activate layout 7=Meta+Num+7
+KZones: Activate layout 8=Meta+Num+8
+KZones: Activate layout 9=Meta+Num+9
+KZones: Cycle layouts=Ctrl+Alt+D
+KZones: Cycle layouts (reversed)=Ctrl+Alt+Shift+D
+KZones: Move active window down=
+KZones: Move active window left=
+KZones: Move active window right=
+KZones: Move active window to next zone=Ctrl+Alt+Right
+KZones: Move active window to previous zone=Ctrl+Alt+Left
+KZones: Move active window to zone 1=Ctrl+Alt+Num+1
+KZones: Move active window to zone 2=Ctrl+Alt+Num+2
+KZones: Move active window to zone 3=Ctrl+Alt+Num+3
+KZones: Move active window to zone 4=Ctrl+Alt+Num+4
+KZones: Move active window to zone 5=Ctrl+Alt+Num+5
+KZones: Move active window to zone 6=Ctrl+Alt+Num+6
+KZones: Move active window to zone 7=Ctrl+Alt+Num+7
+KZones: Move active window to zone 8=Ctrl+Alt+Num+8
+KZones: Move active window to zone 9=Ctrl+Alt+Num+9
+KZones: Move active window up=
+KZones: Snap active window=Meta+Shift+Space
+KZones: Snap all windows=Meta+Space
+KZones: Switch to next window in current zone=Ctrl+Alt+Up
+KZones: Switch to previous window in current zone=Ctrl+Alt+Down
+KZones: Toggle zone overlay=Ctrl+Alt+C
 Kill Window=Meta+Ctrl+Esc
 Move Tablet to Next Output=
 MoveMouseToCenter=Meta+F6
@@ -29,6 +65,26 @@ MoveZoomLeft=
 MoveZoomRight=
 MoveZoomUp=
 Overview=Meta+Tab
+PoloniumCycleEngine=Meta+|
+PoloniumFocusAbove=Meta+K
+PoloniumFocusBelow=Meta+J
+PoloniumFocusLeft=Meta+H
+PoloniumFocusRight=
+PoloniumInsertAbove=Meta+Shift+K
+PoloniumInsertBelow=Meta+Shift+J
+PoloniumInsertLeft=Meta+Shift+H
+PoloniumInsertRight=Meta+Shift+L
+PoloniumOpenSettings=Meta+\\
+PoloniumResizeAbove=Meta+Ctrl+K
+PoloniumResizeBelow=Meta+Ctrl+J
+PoloniumResizeLeft=Meta+Ctrl+H
+PoloniumResizeRight=Meta+Ctrl+L
+PoloniumRetileWindow=
+PoloniumSwitchBTree=
+PoloniumSwitchHalf=
+PoloniumSwitchKwin=
+PoloniumSwitchMonocle=
+PoloniumSwitchThreeColumn=
 Setup Window Shortcut=
 Show Desktop=
 Suspend Compositing=Alt+Shift+F12
@@ -88,7 +144,7 @@ Walk Through Windows of Current Application Alternative=
 Walk Through Windows of Current Application Alternative (Reverse)=
 Window Above Other Windows=
 Window Below Other Windows=
-Window Close=Alt+F4; Meta+Q
+Window Close=Meta+Q; Alt+F4
 Window Custom Quick Tile Bottom=
 Window Custom Quick Tile Left=
 Window Custom Quick Tile Right=
@@ -171,9 +227,35 @@ view_zoom_out=Meta+-
 [org.kde.dolphin.desktop][Global Shortcuts]
 _launch=Meta+F
 
+[org.kde.kcalc.desktop][Global Shortcuts]
+_launch=Calculator
+
+[org.kde.konsole.desktop][Global Shortcuts]
+NewTab=
+NewWindow=
+_launch=Ctrl+Alt+T
+
 [org.kde.krunner.desktop][Global Shortcuts]
 RunClipboard=
 _launch=Meta+R
+
+[org.kde.plasma-systemmonitor.desktop][Global Shortcuts]
+_launch=Meta+Esc
+
+[org.kde.plasma.emojier.desktop][Global Shortcuts]
+_launch=Meta+Ctrl+Alt+Shift+Space; Meta+.
+
+[org.kde.spectacle.desktop][Global Shortcuts]
+ActiveWindowScreenShot=Meta+Print
+CurrentMonitorScreenShot=
+FullScreenScreenShot=Shift+Print
+OpenWithoutScreenshot=
+RecordRegion=
+RecordScreen=
+RecordWindow=
+RectangularRegionScreenShot=Meta+Shift+Print
+WindowUnderCursorScreenShot=Meta+Ctrl+Print
+_launch=Meta+Shift+S; Print
 
 [plasmashell][Global Shortcuts]
 activate application launcher=Alt+F1
@@ -205,3 +287,11 @@ stop current activity=Meta+S
 switch to next activity=
 switch to previous activity=
 toggle do not disturb=
+
+[systemsettings.desktop][Global Shortcuts]
+_launch=Tools
+kcm-kscreen=
+kcm-lookandfeel=
+kcm-powerdevilprofilesconfig=
+kcm-screenlocker=
+kcm-users=
