@@ -160,10 +160,9 @@ echo "## Tailscale ##"
 echo "###############"
 curl -fsSL https://tailscale.com/install.sh | sh
 
-echo "############"
-echo "## Floorp ##"
-echo "############"
-curl -fsSL https://floorp.app/install.sh | sh
+[[ -f ~/.profile ]] || . ~/.profile
+
+sudo tailscale set --operator="$USER"
 
 echo "#####################"
 echo "## Via (Keyboard) ##"
@@ -182,7 +181,7 @@ echo "## Flatpak Install ##"
 echo "#####################"
 flatpak install -y io.github.dweymouth.supersonic com.obsproject.Studio io.github.arunsivaramanneo.GPUViewer org.fedoraproject.MediaWriter com.chatterino.chatterino net.lutris.Lutris \
     com.github.tchx84.Flatseal org.prismlauncher.PrismLauncher com.heroicgameslauncher.hgl xyz.xclicker.xclicker dev.vencord.Vesktop org.winehq.Wine com.usebottles.bottles \
-    com.valvesoftware.steam net.davidotek.pupgui2
+    com.valvesoftware.steam net.davidotek.pupgui2 org.fkoehler.KTailctl
 
 flatpak install --user https://sober.vinegarhq.org/sober.flatpakref
 

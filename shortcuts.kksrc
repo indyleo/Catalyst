@@ -2,6 +2,11 @@
 New=
 _launch=Meta+Return
 
+[brave-browser.desktop][Global Shortcuts]
+_launch=Meta+B
+new-private-window=Meta+Shift+B
+new-window=Meta+Ctrl+B
+
 [dev.vencord.Vesktop.desktop][Global Shortcuts]
 _launch=Meta+D
 
@@ -144,7 +149,7 @@ Walk Through Windows of Current Application Alternative=
 Walk Through Windows of Current Application Alternative (Reverse)=
 Window Above Other Windows=
 Window Below Other Windows=
-Window Close=Alt+F4; Meta+Q
+Window Close=Meta+Q; Alt+F4
 Window Custom Quick Tile Bottom=
 Window Custom Quick Tile Left=
 Window Custom Quick Tile Right=
@@ -221,7 +226,7 @@ Window to Screen 6=
 Window to Screen 7=
 disableInputCapture=Meta+Shift+Esc
 view_actual_size=Meta+0
-view_zoom_in=Meta++; Meta+=
+view_zoom_in=Meta+=; Meta++
 view_zoom_out=Meta+-
 
 [org.kde.dolphin.desktop][Global Shortcuts]
@@ -243,7 +248,7 @@ _launch=Meta+R
 _launch=Meta+Esc
 
 [org.kde.plasma.emojier.desktop][Global Shortcuts]
-_launch=Meta+Ctrl+Alt+Shift+Space; Meta+.
+_launch=Meta+.; Meta+Ctrl+Alt+Shift+Space
 
 [org.kde.spectacle.desktop][Global Shortcuts]
 ActiveWindowScreenShot=Meta+Print
@@ -255,7 +260,7 @@ RecordScreen=
 RecordWindow=
 RectangularRegionScreenShot=Meta+Shift+Print
 WindowUnderCursorScreenShot=Meta+Ctrl+Print
-_launch=Meta+Shift+S; Print
+_launch=Print; Meta+Shift+S
 
 [plasmashell][Global Shortcuts]
 activate application launcher=Alt+F1

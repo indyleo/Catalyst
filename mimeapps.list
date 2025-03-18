@@ -18,8 +18,8 @@ audio/x-speex=vlc.desktop;
 audio/x-vorbis=vlc.desktop;
 audio/x-vorbis+ogg=vlc.desktop;
 audio/x-wav=vlc.desktop;
-x-scheme-handler/http=floorp.desktop;
-x-scheme-handler/https=floorp.desktop;
+x-scheme-handler/http=brave-browser.desktop;kfmclient_html.desktop;floorp.desktop;
+x-scheme-handler/https=brave-browser.desktop;kfmclient_html.desktop;floorp.desktop;
 
 [Default Applications]
 audio/aac=vlc.desktop;
@@ -41,5 +41,5 @@ audio/x-speex=vlc.desktop;
 audio/x-vorbis=vlc.desktop;
 audio/x-vorbis+ogg=vlc.desktop;
 audio/x-wav=vlc.desktop;
-x-scheme-handler/http=floorp.desktop;
-x-scheme-handler/https=floorp.desktop;
+x-scheme-handler/http=brave-browser.desktop;
+x-scheme-handler/https=brave-browser.desktop;
