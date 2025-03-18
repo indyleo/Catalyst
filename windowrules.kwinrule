@@ -20,6 +20,13 @@ types=1
 wmclass=PrismLauncher
 wmclassmatch=1
 
+[OBS]
+Description=OBS
+desktops=5da08ad9-3cf2-47a8-b4df-f16c4fb41af7
+desktopsrule=3
+wmclass=obs
+wmclassmatch=1
+
 [Steam]
 Description=Steam
 desktops=7fe8811e-6729-43e3-ba42-7195651ae58b
