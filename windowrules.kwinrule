@@ -1,3 +1,11 @@
+[Browser]
+Description=Browser
+desktops=18bd1edc-8603-45de-8457-e4bf11652d5a
+desktopsrule=3
+types=1
+wmclass=Brave-browser
+wmclassmatch=1
+
 [Heroic]
 Description=Heroic
 desktops=7fe8811e-6729-43e3-ba42-7195651ae58b
@@ -22,7 +30,7 @@ wmclassmatch=1
 
 [OBS]
 Description=OBS
-desktops=5da08ad9-3cf2-47a8-b4df-f16c4fb41af7
+desktops=98fe3a9c-20e3-47c5-998a-421dd1a6fa88
 desktopsrule=3
 wmclass=obs
 wmclassmatch=1
