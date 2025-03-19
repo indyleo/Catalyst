@@ -8,21 +8,21 @@ wmclassmatch=1
 
 [Heroic]
 Description=Heroic
-desktops=7fe8811e-6729-43e3-ba42-7195651ae58b
+desktops=98fe3a9c-20e3-47c5-998a-421dd1a6fa88
 desktopsrule=3
 wmclass=heroic
 wmclassmatch=1
 
 [Lutris]
 Description=Lutris
-desktops=7fe8811e-6729-43e3-ba42-7195651ae58b
+desktops=98fe3a9c-20e3-47c5-998a-421dd1a6fa88
 desktopsrule=3
 wmclass=Lutris
 wmclassmatch=1
 
 [Minecraft]
 Description=Minecraft
-desktops=7fe8811e-6729-43e3-ba42-7195651ae58b
+desktops=98fe3a9c-20e3-47c5-998a-421dd1a6fa88
 desktopsrule=3
 types=1
 wmclass=PrismLauncher
@@ -30,14 +30,14 @@ wmclassmatch=1
 
 [OBS]
 Description=OBS
-desktops=98fe3a9c-20e3-47c5-998a-421dd1a6fa88
+desktops=f4794d85-0fff-4c16-b0d3-fd6e8e1913d6
 desktopsrule=3
 wmclass=obs
 wmclassmatch=1
 
 [Steam]
 Description=Steam
-desktops=7fe8811e-6729-43e3-ba42-7195651ae58b
+desktops=98fe3a9c-20e3-47c5-998a-421dd1a6fa88
 desktopsrule=3
 types=1
 wmclass=steam
@@ -45,14 +45,14 @@ wmclassmatch=1
 
 [Supersonic]
 Description=Supersonic
-desktops=fcc41568-662e-4130-9ab2-687a2926d8c4
+desktops=75bbd1d8-cd28-495d-afe9-2def78981871
 desktopsrule=3
 wmclass=Supersonic
 wmclassmatch=1
 
 [Terminal]
 Description=Terminal
-desktops=5444eb3d-357e-4d61-a25b-649083ec4120
+desktops=7fe8811e-6729-43e3-ba42-7195651ae58b
 desktopsrule=3
 types=1
 wmclass=Alacritty
@@ -60,7 +60,7 @@ wmclassmatch=1
 
 [Vesktop]
 Description=Vesktop
-desktops=fcc41568-662e-4130-9ab2-687a2926d8c4
+desktops=5444eb3d-357e-4d61-a25b-649083ec4120
 desktopsrule=3
 wmclass=vesktop
 wmclassmatch=1
