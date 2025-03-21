@@ -7,6 +7,12 @@ _launch=Meta+B
 new-private-window=Meta+Shift+B
 new-window=Meta+Ctrl+B
 
+[com.brave.Browser.desktop][Global Shortcuts]
+_launch=Meta+B
+new-private-window=Meta+Ctrl+B
+new-tor-window=Meta+Shift+B
+new-window=
+
 [dev.vencord.Vesktop.desktop][Global Shortcuts]
 _launch=Meta+D
 
@@ -62,6 +68,40 @@ KZones: Switch to next window in current zone=Ctrl+Alt+Up
 KZones: Switch to previous window in current zone=Ctrl+Alt+Down
 KZones: Toggle zone overlay=Ctrl+Alt+C
 Kill Window=Meta+Ctrl+Esc
+KrohnkiteBTreeLayout=
+KrohnkiteColumnsLayout=
+KrohnkiteDecrease=
+KrohnkiteFloatAll=Meta+Shift+F
+KrohnkiteFloatingLayout=
+KrohnkiteFocusDown=
+KrohnkiteFocusLeft=
+KrohnkiteFocusNext=
+KrohnkiteFocusPrev=Meta+,
+KrohnkiteFocusRight=
+KrohnkiteFocusUp=
+KrohnkiteGrowHeight=
+KrohnkiteIncrease=Meta+I
+KrohnkiteMonocleLayout=
+KrohnkiteNextLayout=
+KrohnkitePreviousLayout=
+KrohnkiteQuarterLayout=
+KrohnkiteRotate=
+KrohnkiteRotatePart=Meta+Shift+R
+KrohnkiteSetMaster=
+KrohnkiteShiftDown=
+KrohnkiteShiftLeft=
+KrohnkiteShiftRight=
+KrohnkiteShiftUp=
+KrohnkiteShrinkHeight=
+KrohnkiteShrinkWidth=
+KrohnkiteSpiralLayout=
+KrohnkiteSpreadLayout=
+KrohnkiteStackedLayout=
+KrohnkiteStairLayout=
+KrohnkiteTileLayout=
+KrohnkiteToggleFloat=
+KrohnkiteTreeColumnLayout=
+KrohnkitegrowWidth=
 Move Tablet to Next Output=
 MoveMouseToCenter=Meta+F6
 MoveMouseToFocus=Meta+F5
@@ -149,7 +189,7 @@ Walk Through Windows of Current Application Alternative=
 Walk Through Windows of Current Application Alternative (Reverse)=
 Window Above Other Windows=
 Window Below Other Windows=
-Window Close=Meta+Q; Alt+F4
+Window Close=Alt+F4; Meta+Q
 Window Custom Quick Tile Bottom=
 Window Custom Quick Tile Left=
 Window Custom Quick Tile Right=
@@ -248,7 +288,7 @@ _launch=Meta+R
 _launch=Meta+Esc
 
 [org.kde.plasma.emojier.desktop][Global Shortcuts]
-_launch=Meta+.; Meta+Ctrl+Alt+Shift+Space
+_launch=Meta+Ctrl+Alt+Shift+Space; Meta+.
 
 [org.kde.spectacle.desktop][Global Shortcuts]
 ActiveWindowScreenShot=Meta+Print
@@ -260,7 +300,7 @@ RecordScreen=
 RecordWindow=
 RectangularRegionScreenShot=Meta+Shift+Print
 WindowUnderCursorScreenShot=Meta+Ctrl+Print
-_launch=Print; Meta+Shift+S
+_launch=Meta+Shift+S; Print
 
 [plasmashell][Global Shortcuts]
 activate application launcher=Alt+F1
