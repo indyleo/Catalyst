@@ -90,6 +90,12 @@ bindkey -M vicmd 'j' history-substring-search-down
 # Zoxide
 eval "$(zoxide init zsh --cmd cd)"
 
+# Fzf
+# CTRL-t = fzf select
+# CTRL-r = fzf history
+# ALT-c  = fzf cd
+eval "$(fzf --zsh)"
+
 # Loading zsh plugins (LAST)
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
