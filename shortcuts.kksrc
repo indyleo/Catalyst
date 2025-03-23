@@ -189,7 +189,7 @@ Walk Through Windows of Current Application Alternative=
 Walk Through Windows of Current Application Alternative (Reverse)=
 Window Above Other Windows=
 Window Below Other Windows=
-Window Close=Alt+F4; Meta+Q
+Window Close=Meta+Q; Alt+F4
 Window Custom Quick Tile Bottom=
 Window Custom Quick Tile Left=
 Window Custom Quick Tile Right=
@@ -278,14 +278,14 @@ _launch=Calculator
 [org.kde.konsole.desktop][Global Shortcuts]
 NewTab=
 NewWindow=
-_launch=Ctrl+Alt+T
+_launch=
 
 [org.kde.krunner.desktop][Global Shortcuts]
 RunClipboard=
 _launch=Meta+R
 
 [org.kde.plasma-systemmonitor.desktop][Global Shortcuts]
-_launch=Meta+Esc
+_launch=
 
 [org.kde.plasma.emojier.desktop][Global Shortcuts]
 _launch=Meta+Ctrl+Alt+Shift+Space; Meta+.
@@ -300,7 +300,7 @@ RecordScreen=
 RecordWindow=
 RectangularRegionScreenShot=Meta+Shift+Print
 WindowUnderCursorScreenShot=Meta+Ctrl+Print
-_launch=Meta+Shift+S; Print
+_launch=Print; Meta+Shift+S
 
 [plasmashell][Global Shortcuts]
 activate application launcher=Alt+F1
