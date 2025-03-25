@@ -28,6 +28,10 @@ sudo ./install.sh
 ./usersetups.sh
 ```
 
+# Tailscale Setup
+
+tailscale up --ssh
+
 # Theme Settings
 
 - Get and set the Colors to nord
