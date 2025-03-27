@@ -164,13 +164,6 @@ curl -fsSL https://tailscale.com/install.sh | sh
 
 sudo tailscale set --operator="$USER"
 
-echo "#####################"
-echo "## Via (Keyboard) ##"
-echo "#####################"
-wget https://github.com/the-via/releases/releases/download/v3.0.0/via-3.0.0-linux.deb
-sudo dpkg -i via-3.0.0-linux.deb
-rm -fv via-3.0.0-linux.deb
-
 echo "##################"
 echo "## Flatpak Repo ##"
 echo "##################"
