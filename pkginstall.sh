@@ -39,7 +39,7 @@ apt install -y \
     libkf6configwidgets-dev gettext libkf6crash-dev libkf6globalaccel-dev libkf6kio-dev libkf6service-dev libkf6notifications-dev libkf6kcmutils-dev \
     libkdecorations3-dev libxcb-composite0-dev libxcb-randr0-dev libxcb-shm0-dev libx11-dev libxext-dev qt6-base-dev qt6-svg-dev libkf6windowsystem-dev \
     qt6-base-dev-tools figlet solaar piper xdo xdotool pulseaudio-utils pipewire-alsa pipewire-jack pipewire-audio gameconqueror xrdp pipewire-module-xrdp \
-    qpwgraph pipes-sh wine
+    qpwgraph pipes-sh wine winetricks unrar
 
 systemctl enable xrdp
 
