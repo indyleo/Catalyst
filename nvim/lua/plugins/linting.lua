@@ -19,7 +19,7 @@ return {
 			-- Langs
 			python = { "pylint" },
 			lua = { "luacheck" },
-			go = { "golangci-lint" },
+			go = { "staticcheck" },
 
 			-- Script
 			bash = { "bash" },

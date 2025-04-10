@@ -68,15 +68,8 @@ return {
 				"black",
 				"pylint",
 				"selene",
-
-				-- Go
-				"gofumpt",
-				"goimports",
-				"goimports-reviser",
-				"golines",
-				"gomodifytags",
-				"gotests",
-				"golangci-lint",
+				"crlfmt",
+				"staticcheck",
 
 				-- Script/Shell
 				"beautysh",

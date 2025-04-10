@@ -19,7 +19,7 @@ return {
 				-- Langs
 				lua = { "stylua" },
 				python = { "isort", "black" },
-				go = { "gofumpt", "goimports", "goimports-reviser", "golines", "gomodifytags", "gotests" },
+				go = { "crlfmt" },
 
 				-- Script
 				zsh = { "beautysh" },
