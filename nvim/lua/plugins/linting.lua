@@ -19,12 +19,13 @@ return {
 			-- Langs
 			python = { "pylint" },
 			lua = { "luacheck" },
+			go = { "golangci-lint" },
 
-      -- Script
-      bash = { "bash" },
-      dash = { "dash" },
-      zsh = { "zsh" },
-      ShellCheck = { "shellcheck" },
+			-- Script
+			bash = { "bash" },
+			dash = { "dash" },
+			zsh = { "zsh" },
+			ShellCheck = { "shellcheck" },
 
 			-- All
 			["*"] = { "codespell" },

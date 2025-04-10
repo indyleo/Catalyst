@@ -42,6 +42,7 @@ return {
 				-- Langs
 				"python",
 				"lua",
+				"go",
 				"vim",
 				"vimdoc",
 			},

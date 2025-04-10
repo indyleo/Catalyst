@@ -40,6 +40,9 @@ return {
 				-- Langs
 				"pyright",
 				"lua_ls",
+				"gopls",
+
+				-- Script/Shell
 				"powershell_es",
 				"bashls",
 			},
@@ -65,6 +68,15 @@ return {
 				"black",
 				"pylint",
 				"selene",
+
+				-- Go
+				"gofumpt",
+				"goimports",
+				"goimports-reviser",
+				"golines",
+				"gomodifytags",
+				"gotests",
+				"golangci-lint",
 
 				-- Script/Shell
 				"beautysh",

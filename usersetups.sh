@@ -50,6 +50,11 @@ cd lazygit
 go install
 cd "$builddir"
 
+echo "##################"
+echo "## Lua Programs ##"
+echo "##################"
+sudo luarocks install luacheck
+
 echo "#####################"
 echo "## Python Programs ##"
 echo "#####################"
