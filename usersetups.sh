@@ -46,7 +46,7 @@ echo "## Go Programs ##"
 echo "#################"
 go install github.com/doronbehar/pistol/cmd/pistol@latest
 go install github.com/charmbracelet/glow@latest
-cd lazygit
+cd ~/Github/lazygit
 go install
 cd "$builddir"
 
