@@ -137,14 +137,14 @@ for f in ~/.bashrc ~/.profile ~/.zshenv ~/.zshrc; do
   fi
 done
 
-mv -v .profile .zshenv .zshrc .functionrc .aliasrc .xsession .Xresources ~/
+mv -v .profile .zshenv .zshrc .functionrc .aliasrc ~/
 
 # Cursor Theme
 echo "###################"
 echo "## Cursors Theme ##"
 echo "###################"
 git_clone https://github.com/alvatip/Nordzy-cursors.git ~/Github/Nordzy-cursors
-mv -v ~/Github/Nordzy-cursors/themes/* ~/.local/share/icons
+~/Github/Nordzy-cursors/install.sh
 
 # Icons Theme
 echo "#################"
