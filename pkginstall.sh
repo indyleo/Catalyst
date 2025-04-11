@@ -17,6 +17,14 @@ else
     exit 1
 fi
 
+if [[ -f /etc/apt/sources.list ]]; then
+    rm -v /etc/apt/sources.list
+elif [[ -f /etc/apt/sources.list.d/debian.sources ]]; then
+    rm -v /etc/apt/sources.list.d/debian.sources
+fi
+
+mv -v ./debian.sources /etc/apt/sources.list.d/debian.sources
+
 # Update the system
 apt update && apt upgrade -y
 
