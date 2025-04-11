@@ -131,10 +131,10 @@ git_clone https://gitlab.com/dwt1/wallpapers.git ~/Pictures/wallpaper
 mv -v fastfetch git nvim lf tmux alacritty ohmyposh figletfonts mimeapps.list user-dirs.locale user-dirs.dirs ~/.config/
 
 for f in ~/.bashrc ~/.profile ~/.zshenv ~/.zshrc; do
-  if [ -f "$f" ]; then
-    rm -v "$f"
-    break
-  fi
+    if [ -f "$f" ]; then
+        rm -v "$f"
+        break
+    fi
 done
 
 mv -v .profile .zshenv .zshrc .functionrc .aliasrc ~/
@@ -189,6 +189,6 @@ flatpak install -y io.github.dweymouth.supersonic com.obsproject.Studio io.githu
     com.github.tchx84.Flatseal org.prismlauncher.PrismLauncher com.heroicgameslauncher.hgl xyz.xclicker.xclicker dev.vencord.Vesktop org.winehq.Wine com.usebottles.bottles \
     com.valvesoftware.Steam net.davidotek.pupgui2 org.fkoehler.KTailctl com.brave.Browser com.github.Matoking.protontricks
 
-flatpak install --user https://sober.vinegarhq.org/sober.flatpakref
+flatpak install --user org.vinegarhq.Sober
 
 echo "Setup complete!"
