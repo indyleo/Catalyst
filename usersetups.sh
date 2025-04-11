@@ -151,7 +151,6 @@ echo "#################"
 echo "## Icons Theme ##"
 echo "#################"
 wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.local/share/icons" sh
-mv -v desktopfiles/* ~/.local/share/icons/Papirus-Dark/128x128/apps
 
 # Zsh Setup
 echo "###############"
