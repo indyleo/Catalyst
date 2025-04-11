@@ -129,7 +129,14 @@ mkdir -pv ~/.config
 git_clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
 git_clone https://gitlab.com/dwt1/wallpapers.git ~/Pictures/wallpaper
 mv -v fastfetch git nvim lf tmux alacritty ohmyposh figletfonts mimeapps.list user-dirs.locale user-dirs.dirs ~/.config/
-rm -v ~/.bashrc ~/.profile ~/.zshenv ~/.zshrc
+
+for f in ~/.bashrc ~/.profile ~/.zshenv ~/.zshrc; do
+  if [ -f "$f" ]; then
+    rm -v "$f"
+    break
+  fi
+done
+
 mv -v .profile .zshenv .zshrc .functionrc .aliasrc .xsession .Xresources ~/
 
 # Cursor Theme
