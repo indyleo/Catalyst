@@ -1,6 +1,6 @@
 # My Dotfiles
 
-My Dotfiles for my kde config for [Debian 13](https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-dvd/) or lfs with apt
+My Dotfiles for my kde config for [Debian 13](https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/) or lfs with apt
 
 # Other Settings
 
