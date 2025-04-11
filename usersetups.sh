@@ -87,6 +87,8 @@ echo "############"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 [[ -f "$HOME/.cargo/env" ]] || . "$HOME/.cargo/env"
 
+. "$HOME/.cargo/env"
+
 echo "###################"
 echo "## Rust Programs ##"
 echo "###################"
