@@ -24,8 +24,7 @@ sudo reboot
 ```bash
 git clone https://github.com/indyleo/kdedots.git
 cd kdedots
-sudo ./install.sh
-./usersetups.sh
+./run.sh
 ```
 
 # Tailscale Setup

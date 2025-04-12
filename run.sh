@@ -109,6 +109,9 @@ install_packages "${FONTS[@]}"
 echo "Installing nerd fonts..."
 install_fonts "${NERD_FONTS[@]}"
 
+echo "Updating font cache..."
+fc-cache -vf
+
 echo "Now setting up Sddm theme"
 tar -xf Nordic-Plasma-6.tar.xz -C /usr/share/sddm/themes/
 mv -v sddm.conf /etc/sddm.conf
