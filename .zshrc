@@ -73,6 +73,7 @@ bindkey '^e' edit-command-line
 # Load aliases and functions if exists.
 [[ -f "$HOME/.aliasrc" ]] && source "$HOME/.aliasrc"
 [[ -f "$HOME/.functionrc" ]] && source "$HOME/.functionrc"
+[[ -f "$HOME/.hooksrc" ]] && source "$HOME/.hooksrc"
 
 # Bindkeys
 bindkey -s '^x' 'lc\n'
