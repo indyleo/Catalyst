@@ -49,7 +49,7 @@ cd "$builddir"
 
 echo "Installing rust..."
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-[[ -f "$HOME/.cargo/env" ]] || . "$HOME/.cargo/env"
+[[ -f "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 
 echo "Installing bob-nvim..."
 cargo install bob-nvim
