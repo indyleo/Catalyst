@@ -58,6 +58,5 @@ bob use stable
 echo "Installing yazi..."
 cargo install --locked yazi-fm yazi-cli
 
-
 echo "Installing oh-my-posh..."
 curl -s https://ohmyposh.dev/install.sh | bash -s
