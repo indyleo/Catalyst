@@ -147,5 +147,8 @@ sudo usermod -aG libvirt "$(whoami)"
 echo "Installing tailscale..."
 [[ -f ./tailscale.sh ]] && source ./tailscale.sh
 
+echo "Installing tpm..."
+[[ -f ./install-tpm.sh ]] && source ./install-tpm.sh
+
 echo "System setup complete!"
 echo "Please reboot your system to apply changes."

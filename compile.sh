@@ -12,7 +12,6 @@ git_clone() {
 echo "Cloning repositories..."
 git_clone https://github.com/bayasdev/envycontrol.git ~/Github/envycontrol
 git_clone https://github.com/indyleo/scripts.git ~/.local/scripts
-git_clone https://github.com/tmux-plugins/tpm.git ~/.tmux/plugins/tpm
 git_clone https://github.com/jesseduffield/lazygit.git ~/Github/lazygit
 git_clone https://github.com/taj-ny/kwin-effects-forceblur.git ~/Github/kwin-effects-forceblur
 git_clone https://github.com/tsujan/Kvantum.git ~/Github/Kvantum
@@ -55,6 +54,10 @@ echo "Installing bob-nvim..."
 cargo install bob-nvim
 bob install stable
 bob use stable
+
+echo "Installing yazi..."
+cargo install --locked yazi-fm yazi-cli
+
 
 echo "Installing oh-my-posh..."
 curl -s https://ohmyposh.dev/install.sh | bash -s
