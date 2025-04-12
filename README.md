@@ -44,3 +44,6 @@ tailscale up --ssh --operator=$USER
 # Piper Reminder
 
 If you want to change your mouse setting (only if you have a logitech mouse) you need to plug it in to your computer with a cable, you cant just do it wireless.
+
+![Peek 2025-04-12 19-33](https://github.com/user-attachments/assets/75ccd3a4-b78e-4329-9e5d-4f82053fe187)
+
