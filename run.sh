@@ -108,7 +108,7 @@ echo "Installing fonts..."
 install_packages "${FONTS[@]}"
 
 echo "Installing nerd fonts..."
-install_fonts "${NERD_FONTS[@]}"
+install_font "${NERD_FONTS[@]}"
 
 echo "Updating font cache..."
 fc-cache -vf
