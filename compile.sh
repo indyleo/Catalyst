@@ -47,7 +47,7 @@ sudo make install
 cd "$builddir"
 
 echo "Installing rust..."
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -y
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 [[ -f "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 
 echo "Installing bob-nvim..."
