@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-REPO_URL="https://github.com/indyleo/kdedots.git"
+REPO_URL="https://github.com/indyleo/Catalyst.git"
 REPO_NAME="kdedots"
 LOGFILE="run_$(date +%F_%H-%M-%S).log"
 
