@@ -17,4 +17,8 @@ git_clone https://github.com/guillaumeboehm/Nordzy-cursors ~/Github/Nordzy-curso
 echo "Icons Theme"
 wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.local/share/icons" sh
 
+echo "Now setting up Sddm theme"
+[[ -f ./Nordic-Plasma-6.tar.xz ]] &&  sudo tar -xf Nordic-Plasma-6.tar.xz -C /usr/share/sddm/themes/
+[[ -f ./sddm.conf ]] && sudo cp -v sddm.conf /etc/sddm.conf
+
 echo "Done"

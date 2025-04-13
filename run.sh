@@ -58,9 +58,6 @@ fi
 
 [[ -f ./debian.sources ]] && sudo mv -v ./debian.sources /etc/apt/sources.list.d/debian.sources
 
-
-
-
 echo "Updating system..."
 sudo apt-get update && sudo apt-get upgrade -y
 
@@ -115,10 +112,6 @@ install_fonts "${NERD_FONTS[@]}"
 
 echo "Updating font cache..."
 fc-cache -vf
-
-echo "Now setting up Sddm theme"
-[[ -f ./Nordic-Plasma-6.tar.xz ]] &&  sudo tar -xf Nordic-Plasma-6.tar.xz -C /usr/share/sddm/themes/
-[[ -f ./sddm.conf ]] && sudo mv -v sddm.conf /etc/sddm.conf
 
 echo "Configuring services..."
 for service in "${SERVICES[@]}"; do

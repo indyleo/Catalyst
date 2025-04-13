@@ -49,42 +49,44 @@ FILES_CONFIG=(
     user-dirs.locale
 )
 
+echo "Removing old dotfiles..."
 for file in "${FILES_HOME[@]}"; do
     if [ -f "$HOME/$file" ]; then
-        command rm -f "$HOME/$file"
+        command rm -fv "$HOME/$file"
     fi
 done
 
 for dir in "${DIRS_CONFIG[@]}"; do
     if [ -d "$HOME/.config/$dir" ]; then
-        command rm -rf "$HOME/.config/$dir"
+        command rm -rfv "$HOME/.config/$dir"
     fi
 done
 
 for file in "${FILES_CONFIG[@]}"; do
     if [ -f "$HOME/.config/$file" ]; then
-        command rm -f "$HOME/.config/$file"
+        command rm -fv "$HOME/.config/$file"
     fi
 done
 
 if [ -d ~/.local/share/figletfonts ]; then
-    command rm -rf ~/.local/share/figletfonts
+    command rm -rfv ~/.local/share/figletfonts
 fi
 
+echo "Stowing dotfiles..."
 # Check if the clone was successful
 if [ $? -eq 0 ]; then
     cd "$REPO_NAME"
-    stow --target="$HOME" zsh
-    stow --target="$HOME" shell
-    stow --target="$HOME" figletfonts
-    stow --target="$HOME" xdg
-    stow --target="$HOME" git
-    stow --target="$HOME" yazi
-    stow --target="$HOME" tmux
-    stow --target="$HOME" nvim
-    stow --target="$HOME" ohmyposh
-    stow --target="$HOME" alacritty
-    stow --target="$HOME" fastfetch
+    stow --target="$HOME" -v zsh
+    stow --target="$HOME" -v shell
+    stow --target="$HOME" -v figletfonts
+    stow --target="$HOME" -v xdg
+    stow --target="$HOME" -v git
+    stow --target="$HOME" -v yazi
+    stow --target="$HOME" -v tmux
+    stow --target="$HOME" -v nvim
+    stow --target="$HOME" -v ohmyposh
+    stow --target="$HOME" -v alacritty
+    stow --target="$HOME" -v fastfetch
     cd "$ORIGINAL_DIR"
 else
     echo "Failed to clone the repository."
