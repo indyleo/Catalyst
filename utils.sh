@@ -24,12 +24,15 @@ install_packages() {
 }
 
 # Function to download and extract fonts
-install_font() {
-    local font_name="$1"
-    wget -q "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/${font_name}.zip"
-    unzip -n "${font_name}.zip" -d ~/.local/share/fonts
-    rm -v "${font_name}.zip"
-    echo "Done with ${font_name}"
+install_fonts() {
+    local font_names=("$@")
+    for font_name in "${font_names[@]}"; do
+        echo "Installing ${font_name}..."
+        wget -q "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/${font_name}.zip"
+        unzip -n "${font_name}.zip" -d ~/.local/share/fonts
+        rm -v "${font_name}.zip"
+        echo "Done with ${font_name}"
+    done
 }
 
 # Function to create directories

@@ -56,7 +56,10 @@ elif [[ -f /etc/apt/sources.list.d/debian.sources ]]; then
     sudo rm -v /etc/apt/sources.list.d/debian.sources
 fi
 
-sudo mv -v ./debian.sources /etc/apt/sources.list.d/debian.sources
+[[ -f ./debian.sources ]] && sudo mv -v ./debian.sources /etc/apt/sources.list.d/debian.sources
+
+
+
 
 echo "Updating system..."
 sudo apt-get update && sudo apt-get upgrade -y
@@ -108,14 +111,14 @@ echo "Installing fonts..."
 install_packages "${FONTS[@]}"
 
 echo "Installing nerd fonts..."
-install_font "${NERD_FONTS[@]}"
+install_fonts "${NERD_FONTS[@]}"
 
 echo "Updating font cache..."
 fc-cache -vf
 
 echo "Now setting up Sddm theme"
-tar -xf Nordic-Plasma-6.tar.xz -C /usr/share/sddm/themes/
-mv -v sddm.conf /etc/sddm.conf
+[[ -f ./Nordic-Plasma-6.tar.xz ]] &&  sudo tar -xf Nordic-Plasma-6.tar.xz -C /usr/share/sddm/themes/
+[[ -f ./sddm.conf ]] && sudo mv -v sddm.conf /etc/sddm.conf
 
 echo "Configuring services..."
 for service in "${SERVICES[@]}"; do
