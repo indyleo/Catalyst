@@ -11,7 +11,7 @@ git_clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
 git_clone https://gitlab.com/dwt1/wallpapers.git ~/Pictures/wallpaper/
 
 echo "Cursors Theme"
-git_clone https://github.com/alvatip/Nordzy-cursors.git ~/Github/Nordzy-cursors
+git_clone https://github.com/guillaumeboehm/Nordzy-hyprcursors.git ~/Github/Nordzy-cursors
 ~/Github/Nordzy-cursors/install.sh
 
 echo "Icons Theme"
