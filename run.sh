@@ -154,9 +154,6 @@ sudo usermod -aG libvirt "$(whoami)"
 echo "Installing tailscale..."
 [[ -f ./tailscale.sh ]] && source ./tailscale.sh
 
-echo "Installing tpm..."
-[[ -f ./install-tpm.sh ]] && source ./install-tpm.sh
-
 echo "Installing ultrakill grub theme..."
 wget -O - https://github.com/YouStones/ultrakill-revamp-grub-theme/raw/main/install.sh | bash
 
