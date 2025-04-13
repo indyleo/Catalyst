@@ -27,7 +27,7 @@ echo "Installing lua linter..."
 sudo luarocks install luacheck
 
 echo "Installing spotdl..."
-pipx installl spotdl
+pipx install spotdl
 
 echo "Installing kwin-effects-forceblur..."
 cd ~/Github/kwin-effects-forceblur
