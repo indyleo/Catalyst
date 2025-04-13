@@ -21,27 +21,20 @@ else
     git clone "$REPO_URL"
 fi
 
-for f in ~/.bashrc ~/.profile ~/.zshenv ~/.zshrc; do
-    if [ -f "$f" ]; then
-        rm -v "$f"
-        break
-    fi
-done
-
 # Check if the clone was successful
 if [ $? -eq 0 ]; then
     cd "$REPO_NAME"
-    stow --target="$HOME" zsh
-    stow --target="$HOME" shell
-    stow --target="$HOME" figletfonts
-    stow --target="$HOME" xdg
-    stow --target="$HOME" git
-    stow --target="$HOME" yazi
-    stow --target="$HOME" tmux
-    stow --target="$HOME" nvim
-    stow --target="$HOME" ohmyposh
-    stow --target="$HOME" alacritty
-    stow --target="$HOME" fastfetch
+    stow --target="$HOME" --adopt zsh
+    stow --target="$HOME" --adopt shell
+    stow --target="$HOME" --adopt figletfonts
+    stow --target="$HOME" --adopt xdg
+    stow --target="$HOME" --adopt git
+    stow --target="$HOME" --adopt yazi
+    stow --target="$HOME" --adopt tmux
+    stow --target="$HOME" --adopt nvim
+    stow --target="$HOME" --adopt ohmyposh
+    stow --target="$HOME" --adopt alacritty
+    stow --target="$HOME" --adopt fastfetch
     cd "$ORIGINAL_DIR"
 else
     echo "Failed to clone the repository."
