@@ -23,7 +23,7 @@ sudo reboot
 
 ```bash
 git clone https://github.com/indyleo/Catalyst.git
-cd kdedots
+cd Catalyst
 ./run.sh
 ```
 

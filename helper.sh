@@ -1,7 +1,7 @@
 #!/bin/env bash
 
 REPO_URL="https://github.com/indyleo/Catalyst.git"
-REPO_NAME="kdedots"
+REPO_NAME="Catalyst"
 LOGFILE="run_$(date +%F_%H-%M-%S).log"
 
 set -euo pipefail
