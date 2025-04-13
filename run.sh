@@ -24,11 +24,12 @@ if [[ ! -f ./utils.sh ]]; then
     exit 1
 fi
 
+# Source the utils.sh file
+source ./utils.sh
+
 echo "Creating directories..."
 create_directories
 
-# Source the utils.sh file
-source ./utils.sh
 
 # Check if the package.conf file exists
 if [[ ! -f ./package.conf ]]; then
