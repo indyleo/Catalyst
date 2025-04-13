@@ -22,7 +22,7 @@ sudo reboot
 # How to install
 
 ```bash
-git clone https://github.com/indyleo/kdedots.git
+git clone https://github.com/indyleo/Catalyst.git
 cd kdedots
 ./run.sh
 ```
@@ -30,7 +30,7 @@ cd kdedots
 or
 
 ```bash
-wget https://raw.githubusercontent.com/indyleo/kdedots/refs/heads/main/helper.sh
+wget https://raw.githubusercontent.com/indyleo/Catalyst/refs/heads/main/helper.sh
 chmod a+x helper.sh
 ./helper.sh
 ```
