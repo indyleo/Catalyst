@@ -19,6 +19,7 @@ FLATPAKS=(
     "com.brave.Browser"
     "com.github.Matoking.protontricks"
     "org.vinegarhq.Sober"
+    "io.unobserved.espansoGUI"
 )
 
 echo "Getting flathub repo..."
