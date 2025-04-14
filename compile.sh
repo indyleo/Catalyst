@@ -60,3 +60,14 @@ cargo install --locked yazi-fm yazi-cli
 
 echo "Installing oh-my-posh..."
 curl -s https://ohmyposh.dev/install.sh | bash -s
+
+echo "Installing espanso..."
+tag=$(git ls-remote --tags https://github.com/espanso/espanso.git | grep -o 'refs/tags/.*' | sed 's/refs\/tags\///' | grep -v '{}' | sort -V | tail -n 1)
+
+wget https://github.com/espanso/espanso/releases/download/${tag}/espanso-debian-x11-amd64.deb -O espanso.deb
+sudo apt-get install ./espanso.deb
+rm -fv espanso.deb
+espanso service register
+
+systemctl --user enable espanso.service
+
