@@ -41,6 +41,7 @@ DIRS_CONFIG=(
     fastfetch
     yazi
     git
+    espanso
 )
 
 FILES_CONFIG=(
