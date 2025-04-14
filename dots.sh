@@ -87,6 +87,7 @@ if [ $? -eq 0 ]; then
     stow --target="$HOME" -v ohmyposh
     stow --target="$HOME" -v alacritty
     stow --target="$HOME" -v fastfetch
+    stow --target="$HOME" -v espanso
     cd "$ORIGINAL_DIR"
 else
     echo "Failed to clone the repository."
