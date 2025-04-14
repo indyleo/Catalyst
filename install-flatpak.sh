@@ -13,7 +13,6 @@ FLATPAKS=(
     "dev.vencord.Vesktop"
     "org.winehq.Wine"
     "com.usebottles.bottles"
-    "com.valvesoftware.Steam"
     "net.davidotek.pupgui2"
     "org.fkoehler.KTailctl"
     "com.brave.Browser"
