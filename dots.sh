@@ -31,6 +31,8 @@ FILES_HOME=(
     .hooksrc
     .aliasrc
     .functionrc
+    .Xresources
+    .xinitrc
 )
 
 DIRS_CONFIG=(
@@ -89,6 +91,7 @@ if [ $? -eq 0 ]; then
     stow --target="$HOME" -v alacritty
     stow --target="$HOME" -v fastfetch
     stow --target="$HOME" -v espanso
+    stow --target="$HOME" -v xorg
     cd "$ORIGINAL_DIR"
 else
     echo "Failed to clone the repository."
