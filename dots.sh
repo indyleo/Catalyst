@@ -44,6 +44,7 @@ DIRS_CONFIG=(
     yazi
     git
     espanso
+    picom
 )
 
 FILES_CONFIG=(
@@ -92,6 +93,7 @@ if [ $? -eq 0 ]; then
     stow --target="$HOME" -v fastfetch
     stow --target="$HOME" -v espanso
     stow --target="$HOME" -v xorg
+    stow --target="$HOME" -v picom
     cd "$ORIGINAL_DIR"
 else
     echo "Failed to clone the repository."
