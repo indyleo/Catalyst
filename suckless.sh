@@ -39,6 +39,7 @@ cd ..
 echo "Installing dwm..."
 cd dwm
 sudo make clean install
+sudo cp -v dwm.desktop /usr/share/xsessions/
 cd ..
 
 cd "$ORIGINAL_DIR"
