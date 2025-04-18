@@ -65,47 +65,76 @@ echo "Adding i386 architecture..."
 sudo dpkg --add-architecture i386 && sudo apt update
 
 # Install packages by category
-echo "Installing system utilities..."
-install_packages "${CLI_UTILS[@]}"
+echo "Installing packages..."
 
-echo "Installing development tools..."
-install_packages "${DEV_TOOLS[@]}"
+echo "Installing core cli packages..."
+install_packages "${CORE_CLI[@]}"
 
-echo "Installing system utils..."
-install_packages "${SYSTEM_UTILS[@]}"
+echo "Installing file utils..."
+install_packages "${FILE_UTILS[@]}"
 
-echo "Installing python tools..."
-install_packages "${PYTHON_TOOLS[@]}"
+echo "Installing shell enhancers..."
+install_packages "${SHELL_ENHANCERS[@]}"
 
-echo "Installing java tools..."
-install_packages "${JAVA_TOOLS[@]}"
+echo "Installing terminal utils..."
+install_packages "${TERMINAL_FUN[@]}"
 
-echo "Installing webdev tools..."
-install_packages "${WEBDEV_TOOLS[@]}"
+echo "Installing system tools..."
+install_packages "${SYSTEM_TOOLS[@]}"
 
-echo "Installing shells..."
-install_packages "${SHELLS[@]}"
+echo "Installing dev tools..."
+install_packages "${NVIDIA_TOOLS[@]}"
+
+echo "Installing dev packages..."
+install_packages "${DEV_GENERAL[@]}"
+
+echo "Installing build tools..."
+install_packages "${BUILD_TOOLS[@]}"
+
+echo "Installing gui libs..."
+install_packages "${BUILD_GUI_LIBS[@]}"
+
+echo "Installing kde libs..."
+install_packages "${KF6_LIBS[@]}"
+
+echo "Installing python packages..."
+install_packages "${PYTHON_ENV[@]}"
+
+echo "Installing java packages..."
+install_packages "${JAVA_ENV[@]}"
+
+echo "Installing web dev packages..."
+install_packages "${WEB_DEV[@]}"
 
 echo "Installing media utils..."
 install_packages "${MEDIA_UTILS[@]}"
 
-echo "Installing vm, rdp tools..."
-install_packages "${VM_RDP_TOOLS[@]}"
+echo "Installing audio utils..."
+install_packages "${AUDIO_UTILS[@]}"
 
-echo "Installing input configurations..."
-install_packages "${INPUT_CONFIG[@]}"
+echo "Installing vm tools..."
+install_packages "${VM_TOOLS[@]}"
 
-echo "Installing gaming utils..."
-install_packages "${GAMING_UTILS[@]}"
+echo "Installing gaming tools..."
+install_packages "${GAMING_TOOLS[@]}"
 
-echo "Installing desktop utils..."
-install_packages "${DESKTOP_LIBS[@]}"
+echo "Installing theming tools..."
+install_packages "${THEMING[@]}"
 
-echo "Installing misc..."
-install_packages "${MISC[@]}"
+echo "Installing qt kde libs..."
+install_packages "${QT_KDE_LIBS[@]}"
 
 echo "Installing fonts..."
 install_packages "${FONTS[@]}"
+
+echo "Installing gui utils..."
+install_packages "${GUI_UTILS[@]}"
+
+echo "Installing input utils..."
+install_packages "${INPUT_UTILS[@]}"
+
+echo "Installing script dialogs..."
+install_packages "${SCRIPT_DIALOGS[@]}"
 
 echo "Installing nerd fonts..."
 install_fonts "${NERD_FONTS[@]}"
