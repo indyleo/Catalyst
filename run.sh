@@ -136,6 +136,12 @@ install_packages "${INPUT_UTILS[@]}"
 echo "Installing script dialogs..."
 install_packages "${SCRIPT_DIALOGS[@]}"
 
+echo "Installing xdg apps..."
+install_packages "${XDG_APPS[@]}"
+
+echo "Installing wm tools..."
+install_packages "${WM_TOOLS[@]}"
+
 echo "Installing nerd fonts..."
 install_fonts "${NERD_FONTS[@]}"
 
