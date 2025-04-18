@@ -16,7 +16,6 @@ FLATPAKS=(
     "com.valvesoftware.Steam"
     "net.davidotek.pupgui2"
     "org.fkoehler.KTailctl"
-    "com.brave.Browser"
     "com.github.Matoking.protontricks"
     "org.vinegarhq.Sober"
     "io.unobserved.espansoGUI"
