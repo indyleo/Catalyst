@@ -173,6 +173,9 @@ echo "Dot files..."
 echo "Suckless Tools..."
 [[ -f ./suckless.sh ]] && source ./suckless.sh
 
+echo "Installing clipmenu..."
+[[ -f ./clipmenu.sh ]] && source ./clipmenu.sh
+
 echo "Downloading Themes..."
 [[ -f ./themer.sh ]] && source ./themer.sh
 
