@@ -148,16 +148,6 @@ install_fonts "${NERD_FONTS[@]}"
 echo "Updating font cache..."
 fc-cache -vf
 
-echo "Configuring services..."
-for service in "${SERVICES[@]}"; do
-    if ! systemctl is-enabled "$service" &> /dev/null; then
-        echo "Enabling $service..."
-        sudo systemctl enable "$service"
-    else
-        echo "$service is already enabled"
-    fi
-done
-
 echo "Configuring flatpaks..."
 [[ -f ./install-flatpak.sh ]] && source ./install-flatpak.sh
 
@@ -190,6 +180,16 @@ sudo usermod -aG libvirt "$(whoami)"
 
 echo "Installing tailscale..."
 [[ -f ./tailscale.sh ]] && source ./tailscale.sh
+
+echo "Configuring services..."
+for service in "${SERVICES[@]}"; do
+    if ! systemctl is-enabled "$service" &> /dev/null; then
+        echo "Enabling $service..."
+        sudo systemctl enable "$service"
+    else
+        echo "$service is already enabled"
+    fi
+done
 
 echo "Installing ultrakill grub theme..."
 wget -O - https://github.com/YouStones/ultrakill-revamp-grub-theme/raw/main/install.sh | bash
