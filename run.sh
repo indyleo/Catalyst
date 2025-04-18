@@ -132,6 +132,9 @@ echo "Compiling..."
 echo "Dot files..."
 [[ -f ./dots.sh ]] && source ./dots.sh
 
+echo "Suckless Tools..."
+[[ -f ./suckless.sh ]] && source ./suckless.sh
+
 echo "Downloading Themes..."
 [[ -f ./themer.sh ]] && source ./themer.sh
 
