@@ -45,6 +45,7 @@ DIRS_CONFIG=(
     git
     espanso
     picom
+    dunst
 )
 
 FILES_CONFIG=(
@@ -94,6 +95,7 @@ if [ $? -eq 0 ]; then
     stow --target="$HOME" -v espanso
     stow --target="$HOME" -v xorg
     stow --target="$HOME" -v picom
+    stow --target="$HOME" -v dunst
     cd "$ORIGINAL_DIR"
 else
     echo "Failed to clone the repository."
