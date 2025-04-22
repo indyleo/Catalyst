@@ -20,6 +20,7 @@ git_clone https://codeberg.org/AnErrupTion/ly.git ~/Github/ly
 echo "Installing go tools..."
 go install github.com/doronbehar/pistol/cmd/pistol@latest
 go install github.com/charmbracelet/glow@latest
+go install github.com/walles/moar@latest
 cd ~/Github/lazygit
 go install
 cd "$builddir"
