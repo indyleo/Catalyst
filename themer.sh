@@ -31,6 +31,7 @@ git clone https://github.com/tonyfettes/materia-nord-kvantum.git
 cd materia-nord-kvantum
 sudo cp -vr Kvantum/MateriaNordDark /usr/share/Kvantum
 cd "$ORIGINAL_DIR"
+rm -rfv materia-nord-kvantum
 
 echo "Now setting up Sddm theme"
 [[ -f ./Nordic-Plasma-6.tar.xz ]] &&  sudo tar -xf Nordic-Plasma-6.tar.xz -C /usr/share/sddm/themes/
