@@ -103,3 +103,4 @@ sudo systemctl disable getty@tty2.service
 cd "$builddir"
 sudo cp -v config.ini /etc/ly/config.ini
 sudo systemctl disable sddm
+sudo systemctl enable ly
