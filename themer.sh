@@ -34,7 +34,9 @@ cd "$ORIGINAL_DIR"
 rm -rfv materia-nord-kvantum
 
 echo "Now setting up Sddm theme"
-[[ -f ./Nordic-Plasma-6.tar.xz ]] &&  sudo tar -xf Nordic-Plasma-6.tar.xz -C /usr/share/sddm/themes/
-[[ -f ./sddm.conf ]] && sudo cp -v sddm.conf /etc/sddm.conf
+if [[ -f /bin/sddm ]] &> /dev/null; then
+    [[ -f ./Nordic-Plasma-6.tar.xz ]] &&  sudo tar -xf Nordic-Plasma-6.tar.xz -C /usr/share/sddm/themes/
+    [[ -f ./sddm.conf ]] && sudo cp -v sddm.conf /etc/sddm.conf
+fi
 
 echo "Done"
