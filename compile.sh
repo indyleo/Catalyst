@@ -33,12 +33,18 @@ pipx install spotdl
 
 echo "Installing kwin-effects-forceblur..."
 cd ~/Github/kwin-effects-forceblur
-mkdir build
-cd build
-cmake ../ -DCMAKE_INSTALL_PREFIX=/usr
-make -j
-sudo make install
-cd "$builddir"
+read -p "Did you install kde desktop Y|N: " awnser
+if [[ $awnser == "Y" || $awnser == "y" || -z $awnser ]]; then
+    mkdir build
+    cd build
+    cmake ../ -DCMAKE_INSTALL_PREFIX=/usr
+    make -j
+    sudo make install
+    cd "$builddir"
+else
+    echo "Skipping kwin-effects-forceblur"
+    cd "$builddir"
+fi
 
 echo "Installing kvantum..."
 cd ~/Github/Kvantum/Kvantum
