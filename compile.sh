@@ -33,8 +33,7 @@ pipx install spotdl
 
 echo "Installing kwin-effects-forceblur..."
 cd ~/Github/kwin-effects-forceblur
-read -p "Did you install kde desktop Y|N: " awnser
-if [[ $awnser == "Y" || $awnser == "y" || -z $awnser ]]; then
+if command -v kwin_x11 &> /dev/null; then
     mkdir build
     cd build
     cmake ../ -DCMAKE_INSTALL_PREFIX=/usr
@@ -42,7 +41,7 @@ if [[ $awnser == "Y" || $awnser == "y" || -z $awnser ]]; then
     sudo make install
     cd "$builddir"
 else
-    echo "Skipping kwin-effects-forceblur"
+    echo "Skipping kwin-effects-forceblur, kwin_x11 not found"
     cd "$builddir"
 fi
 
