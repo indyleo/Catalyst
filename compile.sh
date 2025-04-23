@@ -72,25 +72,15 @@ echo "Installing oh-my-posh..."
 curl -s https://ohmyposh.dev/install.sh | bash -s
 
 echo "Installing espanso..."
-mkdir -vp build
-cd bulld
-
 tag_esp=$(git ls-remote --tags https://github.com/espanso/espanso.git | grep -o 'refs/tags/.*' | sed 's/refs\/tags\///' | grep -v '{}' | sort -V | tail -n 1)
-
 wget https://github.com/espanso/espanso/releases/download/${tag_esp}/espanso-debian-x11-amd64.deb -O espanso.deb
 sudo apt-get install ./espanso.deb
 rm -fv espanso.deb
 espanso service register
-
 systemctl --user enable espanso.service
 cd "$builddir"
 
-rm -rfv build
-
 echo "Installing zig..."
-mkdir -vp build
-cd bulld
-
 tag_zig=$(git ls-remote --tags https://github.com/ziglang/zig.git | grep -o 'refs/tags/.*' | sed 's/refs\/tags\///' | grep -v '{}' | sort -V | tail -n 1)
 wget "https://ziglang.org/download/${tag_zig}/zig-linux-x86_64-${tag_zig}.tar.xz" -O zig.tar.xz
 tar xf zig.tar.xz
@@ -99,8 +89,7 @@ cd zig-linux-x86_64-${tag_zig}
 sudo cp -v zig /usr/local/bin/zig
 sudo cp -vr lib /usr/local/lib/zig
 cd "$builddir"
-
-rm -rfv build
+rm -rfv zig-linux-x86_64-${tag_zig}
 
 echo "Installing ly..."
 cd ~/Github/ly
