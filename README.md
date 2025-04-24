@@ -24,6 +24,12 @@ or
 curl -fsSl https://www.linuxlab.work/linux | bash
 ```
 
+# Make ZSH your default shell (after script)
+
+```bash
+chsh -s "$(which zsh)" "$USER"
+```
+
 # Tailscale Setup
 
 tailscale up --ssh --operator=$USER
