@@ -11,8 +11,11 @@ git_clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
 git_clone https://gitlab.com/dwt1/wallpapers.git ~/Pictures/wallpaper/
 
 echo "Cursors Theme"
-git_clone https://github.com/guillaumeboehm/Nordzy-cursors ~/Github/Nordzy-cursors
-~/Github/Nordzy-cursors/install.sh
+mkdir -vp ~/.local/share/icons
+tag_nordzy=$(git ls-remote --tags https://github.com/guillaumeboehm/Nordzy-cursors.git | grep -o 'refs/tags/.*' | sed 's/refs\/tags\///' | grep -v '{}' | sort -V | tail -n 1)
+wget https://github.com/guillaumeboehm/Nordzy-cursors/releases/download/${tag_nordzy}/Nordzy-cursors.tar.gz
+tar xf Nordzy-cursors.tar.gz -C ~/.local/share/icons
+rm -fv Nordzy-cursors.tar.gz
 
 echo "Icons Theme"
 wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.local/share/icons" sh
@@ -27,6 +30,7 @@ gsettings set org.gnome.desktop.interface gtk-theme "Nordic"
 gsettings set org.gnome.desktop.wm.preferences theme "Nordic"
 
 echo "Setting up Nord Kvantum Theme"
+sudo mkdir -vp /usr/share/Kvantum
 git clone https://github.com/tonyfettes/materia-nord-kvantum.git
 cd materia-nord-kvantum
 sudo cp -vr Kvantum/MateriaNordDark /usr/share/Kvantum
