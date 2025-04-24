@@ -172,9 +172,6 @@ echo "Downloading Themes..."
 echo "Configuring zsh plugins..."
 [[ -f ./zsh-plugins.sh ]] && source ./zsh-plugins.sh
 
-# Set zsh as the default login shell
-chsh -s "$(which zsh)" "$USER"
-
 # Add user to libvirt group
 sudo usermod -aG libvirt "$(whoami)"
 
