@@ -189,7 +189,7 @@ for service in "${SERVICES[@]}"; do
 done
 
 echo "Installing ultrakill grub theme..."
-wget -O - https://github.com/YouStones/ultrakill-revamp-grub-theme/raw/main/install.sh | bash
+wget -O - https://github.com/YouStones/ultrakill-revamp-grub-theme/raw/main/install.sh | -s -- --lang English
 
 echo "System setup complete!"
 echo "Please reboot your system to apply changes."
