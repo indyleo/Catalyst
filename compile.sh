@@ -82,6 +82,3 @@ sudo zig build installexe
 sudo systemctl disable getty@tty2.service
 cd "$builddir"
 sudo cp -v config.ini /etc/ly/config.ini
-if [[ -f /bin/sddm ]]; then
-    sudo systemctl disable sddm
-fi
