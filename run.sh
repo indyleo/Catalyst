@@ -94,9 +94,6 @@ install_packages "${BUILD_TOOLS[@]}"
 echo "Installing gui libs..."
 install_packages "${BUILD_GUI_LIBS[@]}"
 
-echo "Installing kde libs..."
-install_packages "${KF6_LIBS[@]}"
-
 echo "Installing python packages..."
 install_packages "${PYTHON_ENV[@]}"
 
@@ -121,8 +118,8 @@ install_packages "${GAMING_TOOLS[@]}"
 echo "Installing theming tools..."
 install_packages "${THEMING[@]}"
 
-echo "Installing qt kde libs..."
-install_packages "${QT_KDE_LIBS[@]}"
+echo "Installing qt libs..."
+install_packages "${QT_LIBS[@]}"
 
 echo "Installing fonts..."
 install_packages "${FONTS[@]}"
