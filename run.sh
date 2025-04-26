@@ -178,6 +178,9 @@ sudo usermod -aG libvirt "$(whoami)"
 echo "Installing tailscale..."
 [[ -f ./tailscale.sh ]] && source ./tailscale.sh
 
+echo "Setting up UFW..."
+[[ -f ./ufw.sh ]] && source ./ufw.sh
+
 echo "Configuring services..."
 for service in "${SERVICES[@]}"; do
     if ! systemctl is-enabled "$service" &> /dev/null; then
