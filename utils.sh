@@ -37,12 +37,10 @@ install_fonts() {
 
 # Function to create directories
 create_directories() {
-    echo "########################################"
-    echo "## Adding Some Directories, And Files ##"
-    echo "########################################"
+    echo "Adding Some Directories, And Files..."
     mkdir -pv ~/Github ~/Img ~/Virt ~/Projects ~/Applications \
         ~/Pictures/Screenshots ~/Scripts ~/.local/bin ~/Desktop \
-        ~/Documents ~/Documents/Markdown ~/Downloads ~/Music \
+        ~/Documents ~/Documents/Markdown/Notes ~/Downloads ~/Music \
         ~/Pictures ~/Public ~/Videos/OBS ~/.config/autostart ~/.cache \
         ~/.local/share/fonts ~/.config ~/.local/share/themes \
         ~/.local/share/icons
