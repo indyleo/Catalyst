@@ -46,6 +46,7 @@ DIRS_CONFIG=(
     espanso
     picom
     dunst
+    qutebrowser
 )
 
 FILES_CONFIG=(
@@ -96,6 +97,7 @@ if [ $? -eq 0 ]; then
     stow --target="$HOME" -v xorg
     stow --target="$HOME" -v picom
     stow --target="$HOME" -v dunst
+    stow --target="$HOME" -v qutebrowser
     cd "$ORIGINAL_DIR"
 else
     echo "Failed to clone the repository."
