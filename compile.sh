@@ -58,6 +58,9 @@ cargo install --locked yazi-fm yazi-cli
 echo "Installing neovide..."
 cargo install --git https://github.com/neovide/neovide
 
+echo "Installing twitch-tui..."
+cargo install twitch-tui
+
 echo "Installing oh-my-posh..."
 curl -s https://ohmyposh.dev/install.sh | bash -s
 
