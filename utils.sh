@@ -44,7 +44,7 @@ create_directories() {
         ~/Pictures ~/Public ~/Videos/OBS ~/.config/autostart ~/.cache \
         ~/.local/share/fonts ~/.config ~/.local/share/themes \
         ~/.local/share/icons
-    touch ~/.cache/history-zsh
+    touch ~/.cache/history-zsh ~/.discordo_token
 }
 
 # Function to clone repositories

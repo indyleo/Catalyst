@@ -13,14 +13,19 @@ echo "Cloning repositories..."
 git_clone https://github.com/bayasdev/envycontrol.git ~/Github/envycontrol
 git_clone https://github.com/indyleo/scripts.git ~/.local/scripts
 git_clone https://github.com/jesseduffield/lazygit.git ~/Github/lazygit
+git_clone https://github.com/ayn2op/discordo ~/Github/discordo
 git_clone https://github.com/tsujan/Kvantum.git ~/Github/Kvantum
 git_clone https://codeberg.org/AnErrupTion/ly.git ~/Github/ly
+
 
 echo "Installing go tools..."
 go install github.com/doronbehar/pistol/cmd/pistol@latest
 go install github.com/charmbracelet/glow@latest
 go install github.com/walles/moar@latest
 cd ~/Github/lazygit
+go install
+cd "$builddir"
+cd ~/Github/discordo
 go install
 cd "$builddir"
 
