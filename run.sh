@@ -151,6 +151,9 @@ echo "Configuring flatpaks..."
 echo "Installing brave..."
 [[ -f ./brave.sh ]] && source ./brave.sh
 
+echo "Installing signal..."
+[[ -f ./signal.sh ]] && source ./signal.sh
+
 echo "Compiling..."
 [[ -f ./compile.sh ]] && source ./compile.sh
 
