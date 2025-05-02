@@ -48,6 +48,7 @@ DIRS_CONFIG=(
     dunst
     qutebrowser
     discordo
+    Thunar
 )
 
 FILES_CONFIG=(
@@ -100,6 +101,7 @@ if [ $? -eq 0 ]; then
     stow --target="$HOME" -v dunst
     stow --target="$HOME" -v qutebrowser
     stow --target="$HOME" -v discordo
+    stow --target="$HOME" -v Thunar
     cd "$ORIGINAL_DIR"
 else
     echo "Failed to clone the repository."
