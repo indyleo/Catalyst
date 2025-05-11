@@ -25,6 +25,8 @@ FILES_HOME=(
     .zshrc
     .zshenv
     .zprofile
+    .zlogout
+    .bash_logout
     .profile
     .bashrc
     .bash_profile
