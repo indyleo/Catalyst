@@ -39,9 +39,6 @@ cd ..
 echo "Installing dwm..."
 cd dwm
 sudo make clean install
-sudo cp -v dwm.desktop /usr/share/xsessions/
-sudo cp -v dwmautostart.sh /usr/local/bin/
-sudo cp -v dwm.png /usr/share/icons/
 cd ..
 
 cd "$ORIGINAL_DIR"
