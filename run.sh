@@ -154,6 +154,9 @@ echo "Installing brave..."
 echo "Installing signal..."
 [[ -f ./signal.sh ]] && source ./signal.sh
 
+echo "Installing syncthing..."
+[[ -f ./syncthing.sh ]] && source ./syncthing.sh
+
 echo "Compiling..."
 [[ -f ./compile.sh ]] && source ./compile.sh
 
