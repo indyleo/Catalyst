@@ -8,7 +8,6 @@ git_clone() {
 
 echo "Downloading Wallpapers..."
 git_clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
-git_clone https://gitlab.com/dwt1/wallpapers.git ~/Pictures/wallpaper/
 
 echo "Cursors Theme"
 mkdir -vp ~/.local/share/icons
