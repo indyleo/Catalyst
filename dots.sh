@@ -82,6 +82,10 @@ if [ -d ~/.local/share/figletfonts ]; then
     command rm -rfv ~/.local/share/figletfonts
 fi
 
+if [ -f ~/.cache/prmt.zsh ]; then
+    command rm -fv ~/.cache/prmt.zsh
+fi
+
 echo "Stowing dotfiles..."
 # Check if the clone was successful
 if [ $? -eq 0 ]; then
