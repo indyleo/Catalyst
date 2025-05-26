@@ -19,7 +19,7 @@ FLATPAKS=(
     "com.github.Matoking.protontricks"
     "org.vinegarhq.Sober"
     "io.unobserved.espansoGUI"
-    "org.gtk.Gtk3theme.Materia-nord"
+    "org.filezillaproject.Filezilla"
 )
 
 echo "Getting flathub repo..."
