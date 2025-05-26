@@ -16,7 +16,7 @@ git_clone https://github.com/jesseduffield/lazygit.git ~/Github/lazygit
 git_clone https://github.com/ayn2op/discordo ~/Github/discordo
 git_clone https://github.com/tsujan/Kvantum.git ~/Github/Kvantum
 git_clone https://codeberg.org/AnErrupTion/ly.git ~/Github/ly
-
+git_clone https://github.com/DavidBuchanan314/fusee-nano.git ~/Github/fusee-nano
 
 echo "Installing go tools..."
 go install github.com/doronbehar/pistol/cmd/pistol@latest
@@ -84,3 +84,8 @@ sudo zig build installexe
 sudo systemctl disable getty@tty2.service
 cd "$builddir"
 sudo cp -v config.ini /etc/ly/config.ini
+
+echo "Installing fusee-nano..."
+cd ~/Github/fusee-nano
+sudo make install
+cd "$builddir"
