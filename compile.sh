@@ -35,6 +35,9 @@ sudo luarocks install luacheck
 echo "Installing spotdl..."
 pipx install spotdl
 
+echo "Installing bitwarden cli..."
+sudo npm install -g @bitwarden/cli
+
 echo "Installing kvantum..."
 cd ~/Github/Kvantum/Kvantum
 mkdir build && cd build
