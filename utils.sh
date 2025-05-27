@@ -41,9 +41,8 @@ create_directories() {
     mkdir -pv ~/Github ~/Img ~/Virt ~/Projects ~/Applications \
         ~/Pictures/Screenshots ~/Scripts ~/.local/bin ~/Desktop \
         ~/Documents ~/Documents/Markdown/Notes ~/Downloads ~/Music \
-        ~/Pictures ~/Public ~/Videos/OBS ~/Videos/vid/ ~/Videos/aud/ \
-        ~/.config/autostart ~/.cache ~/.local/share/fonts ~/.config \
-        ~/.local/share/themes ~/.local/share/icons
+        ~/Pictures ~/Public ~/Videos/OBS  ~/.config/autostart ~/.cache \
+        ~/.local/share/fonts ~/.config ~/.local/share/themes ~/.local/share/icons
     touch ~/.cache/history-zsh ~/.discordo_token
 }
 
