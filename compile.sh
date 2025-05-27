@@ -38,6 +38,9 @@ pipx install spotdl
 echo "Installing bitwarden cli..."
 sudo npm install -g @bitwarden/cli
 
+echo "Installing adblock..."
+pip install adblock --break-system-packages
+
 echo "Installing kvantum..."
 cd ~/Github/Kvantum/Kvantum
 mkdir build && cd build
