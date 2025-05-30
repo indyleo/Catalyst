@@ -83,7 +83,7 @@ if [ -d ~/.local/share/figletfonts ]; then
 fi
 
 if [ -f ~/.cache/prmt.zsh ]; then
-    command rm -fv ~/.cache/prmt.zsh
+    command rm -fv ~/.prmt.zsh
 fi
 
 echo "Stowing dotfiles..."
