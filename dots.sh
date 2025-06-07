@@ -12,7 +12,7 @@ if ! is_stow_installed &> /dev/null; then
     exit 1
 fi
 
-cd ~/Github
+cd ~/Github || exit
 
 # Check if the repository already exists
 if [ -d "$REPO_NAME" ]; then
@@ -51,6 +51,7 @@ DIRS_CONFIG=(
     qutebrowser
     discordo
     Thunar
+    lf
 )
 
 FILES_CONFIG=(
@@ -88,8 +89,8 @@ fi
 
 echo "Stowing dotfiles..."
 # Check if the clone was successful
-if [ $? -eq 0 ]; then
-    cd "$REPO_NAME"
+if [[ $? -eq 0 ]]; then
+    cd "$REPO_NAME" || exit
     stow --target="$HOME" -v zsh
     stow --target="$HOME" -v shell
     stow --target="$HOME" -v figletfonts
@@ -108,7 +109,8 @@ if [ $? -eq 0 ]; then
     stow --target="$HOME" -v qutebrowser
     stow --target="$HOME" -v discordo
     stow --target="$HOME" -v Thunar
-    cd "$ORIGINAL_DIR"
+    stow --target="$HOME" -v lf
+    cd "$ORIGINAL_DIR" || exit
 else
     echo "Failed to clone the repository."
     exit 1

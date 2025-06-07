@@ -58,9 +58,6 @@ cargo install bob-nvim
 bob install stable
 bob use stable
 
-echo "Installing yazi..."
-cargo install --locked yazi-fm yazi-cli
-
 echo "Installing neovide..."
 cargo install --git https://github.com/neovide/neovide
 
