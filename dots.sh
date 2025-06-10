@@ -52,6 +52,8 @@ DIRS_CONFIG=(
     discordo
     Thunar
     lf
+    shell
+    zsh
 )
 
 FILES_CONFIG=(
@@ -83,15 +85,10 @@ if [ -d ~/.local/share/figletfonts ]; then
     command rm -rfv ~/.local/share/figletfonts
 fi
 
-if [ -f ~/.cache/prmt.zsh ]; then
-    command rm -fv ~/.prmt.zsh
-fi
-
 echo "Stowing dotfiles..."
 # Check if the clone was successful
 if [[ $? -eq 0 ]]; then
     cd "$REPO_NAME" || exit
-    stow --target="$HOME" -v zsh
     stow --target="$HOME" -v shell
     stow --target="$HOME" -v figletfonts
     stow --target="$HOME" -v xdg
