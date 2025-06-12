@@ -39,6 +39,7 @@ FILES_HOME=(
 
 DIRS_CONFIG=(
     alacritty
+    neovide
     tmux
     nvim
     ohmyposh
@@ -81,7 +82,7 @@ for file in "${FILES_CONFIG[@]}"; do
     fi
 done
 
-if [ -d ~/.local/share/figletfonts ]; then
+if [[ -d "$HOME/.local/share/figletfonts" ]]; then
     command rm -rfv ~/.local/share/figletfonts
 fi
 
@@ -89,13 +90,14 @@ echo "Stowing dotfiles..."
 # Check if the clone was successful
 if [[ $? -eq 0 ]]; then
     cd "$REPO_NAME" || exit
-    stow --target="$HOME" -v shell
     stow --target="$HOME" -v figletfonts
+    stow --target="$HOME" -v shell
     stow --target="$HOME" -v xdg
     stow --target="$HOME" -v git
     stow --target="$HOME" -v yazi
     stow --target="$HOME" -v tmux
     stow --target="$HOME" -v nvim
+    stow --target="$HOME" -v neovide
     stow --target="$HOME" -v ohmyposh
     stow --target="$HOME" -v alacritty
     stow --target="$HOME" -v fastfetch
