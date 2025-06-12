@@ -15,7 +15,7 @@ fi
 cd ~/Github || exit
 
 # Check if the repository already exists
-if [ -d "$REPO_NAME" ]; then
+if [[ -d "$REPO_NAME" ]]; then
     echo "Repository '$REPO_NAME' already exists. Skipping clone"
 else
     git clone "$REPO_URL"
@@ -65,31 +65,33 @@ FILES_CONFIG=(
 
 echo "Removing old dotfiles..."
 for file in "${FILES_HOME[@]}"; do
-    if [ -f "$HOME/$file" ]; then
+    if [[ -f "$HOME/$file" ]]; then
         command rm -fv "$HOME/$file"
     fi
 done
 
 for dir in "${DIRS_CONFIG[@]}"; do
-    if [ -d "$HOME/.config/$dir" ]; then
+    if [[ -d "$HOME/.config/$dir" ]]; then
         command rm -rfv "$HOME/.config/$dir"
     fi
 done
 
 for file in "${FILES_CONFIG[@]}"; do
-    if [ -f "$HOME/.config/$file" ]; then
+    if [[ -f "$HOME/.config/$file" ]]; then
         command rm -fv "$HOME/.config/$file"
     fi
 done
 
 if [[ -d "$HOME/.local/share/figletfonts" ]]; then
-    command rm -rfv ~/.local/share/figletfonts
+    command rm -rfv "$HOME/.local/share/figletfonts"
 fi
 
 echo "Stowing dotfiles..."
 # Check if the clone was successful
 if [[ $? -eq 0 ]]; then
     cd "$REPO_NAME" || exit
+
+    # Stowing
     stow --target="$HOME" -v figletfonts
     stow --target="$HOME" -v shell
     stow --target="$HOME" -v xdg
@@ -109,6 +111,15 @@ if [[ $? -eq 0 ]]; then
     stow --target="$HOME" -v discordo
     stow --target="$HOME" -v Thunar
     stow --target="$HOME" -v lf
+
+    # Macking surezshenv ges loaded
+    if [[ -f "$HOME/.config/zsh/.zshenv" ]]; then
+        ln -s "$HOME/.config/zsh/.zshenv" "$HOME/.zshenv"
+    else
+        echo ".zshenv not found, HOW?"
+        exit 1
+    fi
+
     cd "$ORIGINAL_DIR" || exit
 else
     echo "Failed to clone the repository."
