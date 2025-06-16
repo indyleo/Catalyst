@@ -16,34 +16,18 @@ cd "$REPO_NAME" || exit
 
 echo "Installing suckless programs"
 
-echo "Installing dmenu..."
-cd dmenu || exit
-sudo make clean install
-cd ..
+# List of suckless programs to install
+programs=("dmenu" "slock" "st" "tabbed" "slstatus" "dwmblocks" "dwm")
 
-echo "Installing slock..."
-cd slock || exit
-sudo make clean install
-cd ..
-
-echo "Installing st..."
-cd st || exit
-sudo make clean install
-cd ..
-
-echo "Installing slstatus..."
-cd slstatus || exit
-sudo make clean install
-cd ..
-
-echo "Installing dwmblocks..."
-cd dwmblocks || exit
-sudo make clean install
-cd ..
-
-echo "Installing dwm..."
-cd dwm || exit
-sudo make clean install
-cd ..
+for prog in "${programs[@]}"; do
+    echo "Installing $prog..."
+    if cd "$prog"; then
+        sudo make clean install || { echo "❌ Failed to install $prog"; exit 1; }
+        cd ..
+    else
+        echo "❌ Directory $prog not found!"
+        exit 1
+    fi
+done
 
 cd "$ORIGINAL_DIR" || exit
