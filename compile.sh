@@ -3,7 +3,7 @@
 builddir=$(pwd)
 
 # Function to clone repositories
-git_clone() {
+function git_clone() {
     local repo="$1"
     local dest="$2"
     [[ -d "$dest" ]] || git clone --depth=1 "$repo" "$dest"
