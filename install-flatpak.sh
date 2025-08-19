@@ -18,6 +18,7 @@ FLATPAKS=(
     "org.vinegarhq.Sober"
     "io.unobserved.espansoGUI"
     "org.filezillaproject.Filezilla"
+    "page.codeberg.JakobDev.jdNBTExplorer"
 )
 
 echo "Getting flathub repo..."
