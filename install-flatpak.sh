@@ -16,6 +16,7 @@ FLATPAKS=(
     "io.unobserved.espansoGUI"
     "org.filezillaproject.Filezilla"
     "page.codeberg.JakobDev.jdNBTExplorer"
+    "io.github.Faugus.faugus-launcher"
 )
 
 echo "Getting flathub repo..."
