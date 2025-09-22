@@ -68,11 +68,18 @@ cargo install caligula
 echo "Installing espanso..."
 tag_esp=$(git ls-remote --tags https://github.com/espanso/espanso.git | grep -o 'refs/tags/.*' | sed 's/refs\/tags\///' | grep -v '{}' | sort -V | tail -n 1)
 wget https://github.com/espanso/espanso/releases/download/${tag_esp}/espanso-debian-x11-amd64.deb -O espanso.deb
-sudo apt-get install ./espanso.deb -y
+sudo dpkg -i espanso.deb
 rm -fv espanso.deb
 espanso service register
 systemctl --user enable espanso.service
 cd "$builddir"
+
+echo "Installing via-app..."
+tag_via=$(git ls-remote --tags https://github.com/the-via/releases | grep -o 'refs/tags/.*' | sed 's/refs\/tags\///' | grep -v '{}' | sort -V | tail -n 1)
+ver_via=$(echo "$tag_via" | sed 's/v//')
+wget "https://github.com/the-via/releases/releases/download/${tag_via}/via-${ver_via}-linux.deb" -O via-app.deb
+sudo dpkg -i via-app.deb
+rm -fv via-app.deb
 
 echo "Installing zig..."
 tag_zig=$(git ls-remote --tags https://github.com/ziglang/zig.git | grep -o 'refs/tags/.*' | sed 's/refs\/tags\///' | grep -v '{}' | sort -V | tail -n 1)
