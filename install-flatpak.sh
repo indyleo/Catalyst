@@ -10,7 +10,6 @@ FLATPAKS=(
     "dev.vencord.Vesktop"
     "org.winehq.Wine"
     "net.davidotek.pupgui2"
-    "org.fkoehler.KTailctl"
     "com.github.Matoking.protontricks"
     "org.vinegarhq.Sober"
     "io.unobserved.espansoGUI"
