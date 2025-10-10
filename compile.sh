@@ -114,3 +114,6 @@ curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-
 
 echo "Installing gurk..."
 cargo binstall --git https://github.com/boxdot/gurk-rs gurk
+
+echo "Installing twt..."
+cargo install twitch-tui
