@@ -108,3 +108,9 @@ echo "Installing dragon..."
 cd ~/Github/dragon
 make install
 cd "$builddir"
+
+echo "Installing cargo-binstall..."
+curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
+
+echo "Installing gurk..."
+cargo binstall --git https://github.com/boxdot/gurk-rs gurk
