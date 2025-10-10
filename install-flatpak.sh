@@ -1,6 +1,5 @@
 #!/bin/env bash
 FLATPAKS=(
-    "io.github.dweymouth.supersonic"
     "com.obsproject.Studio"
     "io.github.arunsivaramanneo.GPUViewer"
     "org.fedoraproject.MediaWriter"
