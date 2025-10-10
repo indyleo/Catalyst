@@ -116,7 +116,7 @@ if [[ $? -eq 0 ]]; then
     stow --target="$HOME" -v pipewire
     stow --target="$HOME" -v gurk
 
-    # Macking surezshenv ges loaded
+    # Macking sure zshenv gets loaded
     if [[ -f "$HOME/.config/zsh/.zshenv" ]]; then
         ln -s "$HOME/.config/zsh/.zshenv" "$HOME/.zshenv"
     else
