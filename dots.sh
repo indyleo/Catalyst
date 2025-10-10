@@ -56,6 +56,7 @@ DIRS_CONFIG=(
     shell
     zsh
     pipewire
+    gurk
 )
 
 FILES_CONFIG=(
@@ -113,6 +114,7 @@ if [[ $? -eq 0 ]]; then
     stow --target="$HOME" -v Thunar
     stow --target="$HOME" -v lf
     stow --target="$HOME" -v pipewire
+    stow --target="$HOME" -v gurk
 
     # Macking surezshenv ges loaded
     if [[ -f "$HOME/.config/zsh/.zshenv" ]]; then
