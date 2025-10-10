@@ -17,6 +17,7 @@ git_clone https://github.com/tsujan/Kvantum.git ~/Github/Kvantum
 git_clone https://codeberg.org/AnErrupTion/ly.git ~/Github/ly
 git_clone https://github.com/DavidBuchanan314/fusee-nano.git ~/Github/fusee-nano
 git_clone https://github.com/mwh/dragon.git ~/Github/dragon
+git_clone https://git.dayanhub.com/sagi/subsonic-tui.git ~/Github/subsonic-tui
 
 echo "Installing go tools..."
 go install github.com/doronbehar/pistol/cmd/pistol@latest
@@ -112,7 +113,6 @@ echo "Installing twt..."
 cargo install twitch-tui
 
 echo "Installing subsonic-tui..."
-git_clone https://git.dayanhub.com/sagi/subsonic-tui.git ~/Github/subsonic-tui
 cd ~/Github/subsonic-tui
 make build
 make install
