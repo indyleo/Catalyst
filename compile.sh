@@ -110,3 +110,11 @@ cargo binstall --git https://github.com/boxdot/gurk-rs gurk
 
 echo "Installing twt..."
 cargo install twitch-tui
+
+echo "Installing subsonic-tui..."
+git_clone https://git.dayanhub.com/sagi/subsonic-tui.git ~/Github/subsonic-tui
+cd ~/Github/subsonic-tui
+make build
+make install
+cd "$builddir"
+
