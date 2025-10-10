@@ -3,7 +3,6 @@ FLATPAKS=(
     "io.github.dweymouth.supersonic"
     "com.obsproject.Studio"
     "org.fedoraproject.MediaWriter"
-    "com.chatterino.chatterino"
     "com.github.tchx84.Flatseal"
     "org.prismlauncher.PrismLauncher"
     "xyz.xclicker.xclicker"
