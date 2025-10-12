@@ -51,14 +51,14 @@ make
 sudo make install
 cd "$builddir"
 
+echo "Installing nvim..."
+cd ~/.local/scripts
+./bob install
+cd "$builddir"
+
 echo "Installing rust..."
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 [[ -f "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
-
-echo "Installing bob-nvim..."
-cargo install bob-nvim
-bob install stable
-bob use stable
 
 echo "Installing neovide..."
 cargo install --git https://github.com/neovide/neovide
