@@ -1,6 +1,5 @@
 #!/bin/env bash
 FLATPAKS=(
-    "com.obsproject.Studio"
     "com.github.tchx84.Flatseal"
     "org.prismlauncher.PrismLauncher"
     "xyz.xclicker.xclicker"
