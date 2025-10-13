@@ -1,6 +1,5 @@
 #!/bin/env bash
 FLATPAKS=(
-    "com.obsproject.Studio"
     "io.github.arunsivaramanneo.GPUViewer"
     "com.github.tchx84.Flatseal"
     "org.prismlauncher.PrismLauncher"
