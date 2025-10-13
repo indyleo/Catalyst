@@ -1,7 +1,6 @@
 #!/bin/env bash
 FLATPAKS=(
     "com.obsproject.Studio"
-    "org.fedoraproject.MediaWriter"
     "com.github.tchx84.Flatseal"
     "org.prismlauncher.PrismLauncher"
     "xyz.xclicker.xclicker"
