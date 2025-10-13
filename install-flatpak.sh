@@ -9,7 +9,6 @@ FLATPAKS=(
     "net.davidotek.pupgui2"
     "com.github.Matoking.protontricks"
     "org.vinegarhq.Sober"
-    "io.unobserved.espansoGUI"
     "org.filezillaproject.Filezilla"
     "page.codeberg.JakobDev.jdNBTExplorer"
     "io.github.Faugus.faugus-launcher"
