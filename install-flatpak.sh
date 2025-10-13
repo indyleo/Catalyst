@@ -2,7 +2,6 @@
 FLATPAKS=(
     "com.obsproject.Studio"
     "io.github.arunsivaramanneo.GPUViewer"
-    "org.fedoraproject.MediaWriter"
     "com.github.tchx84.Flatseal"
     "org.prismlauncher.PrismLauncher"
     "com.heroicgameslauncher.hgl"
