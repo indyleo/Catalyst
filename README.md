@@ -1,6 +1,6 @@
 # Catalyst
 
-Catalyst is for [Debian 13](https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/) may be expanded at some point for archlinux.
+Catalyst is for [Debian 13](https://www.debian.org/) may be expanded at some point for archlinux.
 
 # EnvyControl
 
