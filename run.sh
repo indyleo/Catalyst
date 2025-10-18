@@ -56,7 +56,7 @@ elif [[ -f /etc/apt/sources.list.d/debian.sources ]]; then
     sudo rm -v /etc/apt/sources.list.d/debian.sources
 fi
 
-[[ -f ./debian.sources ]] && sudo mv -v ./debian.sources /etc/apt/sources.list.d/debian.sources
+[[ -f ./debian.sources ]] && sudo cp -v ./debian.sources /etc/apt/sources.list.d/debian.sources
 
 echo "Updating system..."
 sudo apt-get update && sudo apt-get upgrade -y
