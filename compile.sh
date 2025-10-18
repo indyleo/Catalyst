@@ -13,9 +13,9 @@ echo "Cloning repositories..."
 git_clone https://github.com/indyleo/scripts.git ~/.local/scripts
 git_clone https://github.com/jesseduffield/lazygit.git ~/Github/lazygit
 git_clone https://github.com/ayn2op/discordo ~/Github/discordo
-git_clone https://github.com/tsujan/Kvantum.git ~/Github/Kvantum
 git_clone https://codeberg.org/AnErrupTion/ly.git ~/Github/ly
 git_clone https://github.com/DavidBuchanan314/fusee-nano.git ~/Github/fusee-nano
+git_clone https://github.com/tsujan/Kvantum.git ~/Github/Kvantum
 git_clone https://github.com/mwh/dragon.git ~/Github/dragon
 git_clone https://git.dayanhub.com/sagi/subsonic-tui.git ~/Github/subsonic-tui
 
@@ -43,12 +43,11 @@ echo "Installing adblock..."
 pip install adblock --break-system-packages
 
 echo "Installing kvantum..."
-cd ~/Github/Kvantum/Kvantum
+cd Kvantum/Kvantum
 mkdir build && cd build
 cmake ..
-make
+make -j$(nproc)
 sudo make install
-cd "$builddir"
 
 echo "Installing nvim..."
 cd ~/.local/scripts
