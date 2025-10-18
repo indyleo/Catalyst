@@ -83,7 +83,7 @@ cd zig-x86_64-linux-${tag_zig}
 sudo cp -v zig /usr/local/bin/zig
 sudo cp -vr lib /usr/local/lib/zig
 cd "$builddir"
-rm -rfv zig-linux-x86_64-${tag_zig}
+rm -rfv zig-x86_64-linux-${tag_zig}
 
 echo "Installing ly..."
 cd ~/Github/ly
