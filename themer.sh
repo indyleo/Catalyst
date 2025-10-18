@@ -37,8 +37,8 @@ rm -rfv materia-nord-kvantum
 echo "Gruvbox GTK Theme"
 git_clone https://github.com/TheGreatMcPain/gruvbox-material-gtk ~/Github/gruvbox-material-gtk
 cd ~/Github/gruvbox-material-gtk
-cp ./themes/* ~/.local/share/themes
-cp ./icons/* ~/.local/share/icons
+cp -r ./themes/* ~/.local/share/themes
+cp -r ./icons/* ~/.local/share/icons
 cd "$ORIGINAL_DIR"
 rm -rfv ~/Github/gruvbox-material-gtk
 
