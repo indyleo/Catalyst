@@ -26,13 +26,43 @@ function install_packages() {
 # Function to download and extract fonts
 function install_fonts() {
     local font_names=("$@")
+    local font_dir="$HOME/.local/share/fonts"
+
+    # Make sure the fonts directory exists
+    mkdir -p "$font_dir"
+
+    # Get latest release tag from GitHub using git ls-remote
+    local latest_tag
+    latest_tag=$(git ls-remote --tags https://github.com/ryanoasis/nerd-fonts.git \
+            | grep -o 'refs/tags/.*' \
+            | sed 's/refs\/tags\///' \
+            | grep -v '{}' \
+            | sort -V \
+        | tail -n 1)
+
+    if [[ -z "$latest_tag" ]]; then
+        echo "Failed to get latest Nerd Fonts release. Using v3.3.0 as fallback."
+        latest_tag="v3.4.0"
+    else
+        echo "Latest Nerd Fonts release: $latest_tag"
+    fi
+
     for font_name in "${font_names[@]}"; do
+        # Check if any files from this font already exist
+        if compgen -G "$font_dir/${font_name}*" > /dev/null; then
+            echo "Font ${font_name} is already installed. Skipping..."
+            continue
+        fi
+
         echo "Installing ${font_name}..."
-        wget -q "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/${font_name}.zip"
-        unzip -n "${font_name}.zip" -d ~/.local/share/fonts
+        wget -q "https://github.com/ryanoasis/nerd-fonts/releases/download/${latest_tag}/${font_name}.zip" -O "${font_name}.zip"
+        unzip -n "${font_name}.zip" -d "$font_dir"
         rm -v "${font_name}.zip"
         echo "Done with ${font_name}"
     done
+
+    # Refresh font cache
+    fc-cache -vf "$font_dir"
 }
 
 # Function to create directories

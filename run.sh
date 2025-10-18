@@ -142,9 +142,6 @@ install_packages "${WM_TOOLS[@]}"
 echo "Installing nerd fonts..."
 install_fonts "${NERD_FONTS[@]}"
 
-echo "Updating font cache..."
-fc-cache -vf
-
 echo "Configuring flatpaks..."
 [[ -f ./install-flatpak.sh ]] && source ./install-flatpak.sh
 
