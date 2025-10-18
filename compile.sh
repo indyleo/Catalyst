@@ -88,7 +88,7 @@ rm -fv via-app.deb
 
 echo "Installing zig..."
 tag_zig=$(git ls-remote --tags https://github.com/ziglang/zig.git | grep -o 'refs/tags/.*' | sed 's/refs\/tags\///' | grep -v '{}' | sort -V | tail -n 1)
-wget "https://ziglang.org/download/${tag_zig}/zig-linux-x86_64-${tag_zig}.tar.xz" -O zig.tar.xz
+wget "https://ziglang.org/download/${tag_zig}/zig-x86_64-linux-${tag_zig}.tar.xz" -O zig.tar.xz
 tar xf zig.tar.xz
 rm -fv zig.tar.xz
 cd zig-linux-x86_64-${tag_zig}
