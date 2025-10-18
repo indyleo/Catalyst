@@ -1,11 +1,11 @@
 #!/bin/env bash
 # Check if a package is installed (APT-based)
-is_installed() {
+function is_installed() {
     dpkg -s "$1" &> /dev/null
 }
 
 # Function to install packages if not already installed (APT version)
-install_packages() {
+function install_packages() {
     local packages=("$@")
     local to_install=()
 
@@ -24,7 +24,7 @@ install_packages() {
 }
 
 # Function to download and extract fonts
-install_fonts() {
+function install_fonts() {
     local font_names=("$@")
     for font_name in "${font_names[@]}"; do
         echo "Installing ${font_name}..."
@@ -36,18 +36,19 @@ install_fonts() {
 }
 
 # Function to create directories
-create_directories() {
+function create_directories() {
     echo "Adding Some Directories, And Files..."
     mkdir -pv ~/Github ~/Img ~/Virt ~/Projects ~/Applications \
         ~/Pictures/Screenshots ~/Scripts ~/.local/bin ~/Desktop \
         ~/Documents ~/Documents/Markdown/Notes ~/Downloads ~/Music \
         ~/Pictures ~/Public ~/Videos/OBS  ~/.config/autostart ~/.cache \
-        ~/.local/share/fonts ~/.config ~/.local/share/themes ~/.local/share/icons
-    touch ~/.cache/history-zsh ~/.discordo_token
+        ~/Archives ~/Code ~/Diffs ~/Bin ~/.local/share/fonts ~/.config \
+        ~/.local/share/themes ~/.local/share/icons
+    touch ~/.cache/history-zsh
 }
 
 # Function to clone repositories
-git_clone() {
+function git_clone() {
     local repo="$1"
     local dest="$2"
     [[ -d "$dest" ]] || git clone --depth=1 "$repo" "$dest"
