@@ -47,8 +47,12 @@ echo "Installing kvantum..."
 cd ~/Github/Kvantum/Kvantum
 mkdir build && cd build
 cmake ..
-make
+make -j$(nproc)
 sudo make install
+
+echo "Installing nvim..."
+cd ~/.local/scripts
+./bob install
 cd "$builddir"
 
 echo "Installing nvim..."
