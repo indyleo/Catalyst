@@ -145,9 +145,6 @@ install_fonts "${NERD_FONTS[@]}"
 echo "Configuring flatpaks..."
 [[ -f ./install-flatpak.sh ]] && source ./install-flatpak.sh
 
-echo "Installing brave..."
-[[ -f ./brave.sh ]] && source ./brave.sh
-
 echo "Installing signal..."
 [[ -f ./signal.sh ]] && source ./signal.sh
 
@@ -194,6 +191,8 @@ done
 echo "Installing ultrakill grub theme..."
 wget -O- https://github.com/YouStones/ultrakill-revamp-grub-theme/raw/main/install.sh | bash -s -- --lang English
 
+echo "Setting zsh as default shell..."
+chsh -s "$(which zsh)" "$USER"
+
 echo "System setup complete!"
 echo "Please reboot your system to apply changes."
-chsh -s "$(which zsh)" "$USER"
