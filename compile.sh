@@ -79,7 +79,7 @@ tag_zig=$(git ls-remote --tags https://github.com/ziglang/zig.git | grep -o 'ref
 wget "https://ziglang.org/download/${tag_zig}/zig-x86_64-linux-${tag_zig}.tar.xz" -O zig.tar.xz
 tar xf zig.tar.xz
 rm -fv zig.tar.xz
-cd zig-linux-x86_64-${tag_zig}
+cd zig-x86_64-linux-${tag_zig}
 sudo cp -v zig /usr/local/bin/zig
 sudo cp -vr lib /usr/local/lib/zig
 cd "$builddir"
