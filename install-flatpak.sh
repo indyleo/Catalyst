@@ -4,7 +4,6 @@ FLATPAKS=(
     "org.prismlauncher.PrismLauncher"
     "xyz.xclicker.xclicker"
     "dev.vencord.Vesktop"
-    "org.winehq.Wine"
     "net.davidotek.pupgui2"
     "com.github.Matoking.protontricks"
     "org.vinegarhq.Sober"
