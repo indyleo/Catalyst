@@ -97,9 +97,6 @@ install_packages "${BUILD_GUI_LIBS[@]}"
 echo "Installing python packages..."
 install_packages "${PYTHON_ENV[@]}"
 
-echo "Installing java packages..."
-install_packages "${JAVA_ENV[@]}"
-
 echo "Installing web dev packages..."
 install_packages "${WEB_DEV[@]}"
 
