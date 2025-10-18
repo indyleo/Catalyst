@@ -196,3 +196,4 @@ wget -O- https://github.com/YouStones/ultrakill-revamp-grub-theme/raw/main/insta
 
 echo "System setup complete!"
 echo "Please reboot your system to apply changes."
+chsh -s "$(which zsh)" "$USER"
