@@ -43,7 +43,7 @@ echo "Installing adblock..."
 pip install adblock --break-system-packages
 
 echo "Installing kvantum..."
-cd Kvantum/Kvantum
+cd ~/Github/Kvantum/Kvantum
 mkdir build && cd build
 cmake ..
 make -j$(nproc)
