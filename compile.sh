@@ -36,6 +36,9 @@ sudo luarocks install luacheck
 echo "Installing spotdl..."
 pipx install spotdl
 
+echo "Installing protonup..."
+pipx install protonup
+
 echo "Installing bitwarden cli..."
 sudo npm install -g @bitwarden/cli
 
