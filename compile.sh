@@ -102,6 +102,8 @@ rm -rfv zig-x86_64-linux-${tag_zig}
 
 echo "Installing ly..."
 cd ~/Github/ly
+tag_ly=$(git ls-remote --tags https://codeberg.org/AnErrupTion/ly.git | grep -o 'refs/tags/.*' | sed 's/refs\/tags\///' | grep -v '{}' | sort -V | tail -n 1)
+git checkout "$tag_ly"
 sudo zig build installexe
 sudo systemctl disable getty@tty2.service
 cd "$builddir"
