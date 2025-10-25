@@ -41,7 +41,7 @@ function install_fonts() {
         | tail -n 1)
 
     if [[ -z "$latest_tag" ]]; then
-        echo "Failed to get latest Nerd Fonts release. Using v3.3.0 as fallback."
+        echo "Failed to get latest Nerd Fonts release. Using v3.4.0 as fallback."
         latest_tag="v3.4.0"
     else
         echo "Latest Nerd Fonts release: $latest_tag"
