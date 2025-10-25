@@ -31,11 +31,10 @@ function install_fonts() {
     # Make sure the fonts directory exists
     mkdir -p "$font_dir"
 
-    # Get latest release tag from GitHub using git ls-remote
+    # Get latest release tag from GitHub
     local latest_tag
     latest_tag=$(git ls-remote --tags https://github.com/ryanoasis/nerd-fonts.git \
-            | grep -o 'refs/tags/.*' \
-            | sed 's/refs\/tags\///' \
+            | awk -F/ '/refs\/tags\/v/{print $3}' \
             | grep -v '{}' \
             | sort -V \
         | tail -n 1)
@@ -48,17 +47,24 @@ function install_fonts() {
     fi
 
     for font_name in "${font_names[@]}"; do
-        # Check if any files from this font already exist
+        # Check if font is already installed
         if compgen -G "$font_dir/${font_name}*" > /dev/null; then
             echo "Font ${font_name} is already installed. Skipping..."
             continue
         fi
 
         echo "Installing ${font_name}..."
-        wget -q "https://github.com/ryanoasis/nerd-fonts/releases/download/${latest_tag}/${font_name}.zip" -O "${font_name}.zip"
-        unzip -n "${font_name}.zip" -d "$font_dir"
-        rm -v "${font_name}.zip"
-        echo "Done with ${font_name}"
+        if wget -q "https://github.com/ryanoasis/nerd-fonts/releases/download/${latest_tag}/${font_name}.zip" -O "${font_name}.zip"; then
+            if command -v unzip >/dev/null 2>&1; then
+                unzip -n "${font_name}.zip" -d "$font_dir"
+                rm -v "${font_name}.zip"
+                echo "Done with ${font_name}"
+            else
+                echo "Error: unzip not installed. Cannot extract ${font_name}.zip"
+            fi
+        else
+            echo "Error downloading ${font_name}.zip"
+        fi
     done
 
     # Refresh font cache
