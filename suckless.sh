@@ -17,7 +17,7 @@ cd "$REPO_NAME" || exit
 echo "Installing suckless programs"
 
 # List of suckless programs to install
-programs=("dmenu" "slock" "st" "dwm")
+programs=("dmenu" "slock" "st" "dwm" "dwmblocks-async")
 
 for prog in "${programs[@]}"; do
     echo "Installing $prog..."
