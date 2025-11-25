@@ -145,6 +145,9 @@ install_fonts "${NERD_FONTS[@]}"
 echo "Configuring flatpaks..."
 [[ -f ./install-flatpak.sh ]] && source ./install-flatpak.sh
 
+echo "Installing remote managment software..."
+[[ -f ./install-remote.sh ]] && source ./install-remote.sh
+
 echo "Installing signal..."
 [[ -f ./signal.sh ]] && source ./signal.sh
 
