@@ -3,11 +3,7 @@ ORIGINAL_DIR=$(pwd)
 REPO_URL="https://github.com/indyleo/dotfiles-stow"
 REPO_NAME="dotfiles-stow"
 
-is_stow_installed() {
-    dpkg -s "stow" &> /dev/null
-}
-
-if ! is_stow_installed &> /dev/null; then
+if ! is_dpkg_installed stow &> /dev/null; then
     echo "Stow is not installed. Please install stow."
     exit 1
 fi

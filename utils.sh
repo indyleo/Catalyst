@@ -1,7 +1,12 @@
 #!/bin/env bash
 # Check if a package is installed (APT-based)
-function is_installed() {
+function is_dpkg_installed() {
     dpkg -s "$1" &> /dev/null
+}
+
+# Check if a package is installed (flatpak-based)
+function is_flatpak_installed() {
+    flatpak list --app --columns=application | grep -Fxq "$1" &> /dev/null
 }
 
 # Function to install packages if not already installed (APT version)
@@ -10,16 +15,39 @@ function install_packages() {
     local to_install=()
 
     for pkg in "${packages[@]}"; do
-        if ! is_installed "$pkg"; then
+        if ! is_dpkg_installed "$pkg"; then
+            to_install+=("$pkg")
+        fi
+    done
+
+    if (( ${#to_install[@]} > 0 )); then
+        echo "Installing: ${to_install[*]}"
+        sudo apt-get install -y "${to_install[@]}"
+    else
+        echo "All packages are already installed."
+    fi
+}
+
+# function to install packages if not already installed (flatpak version)
+function install_flatpak() {
+    local packages=("$@")
+    local to_install=()
+
+    # list installed refs only, avoiding substring matches
+    local installed_refs
+    installed_refs=$(flatpak list --app --columns=application)
+
+    for pkg in "${packages[@]}"; do
+        if ! is_flatpak_installed "$pkg"; then
             to_install+=("$pkg")
         fi
     done
 
     if [ ${#to_install[@]} -ne 0 ]; then
-        echo "Installing: ${to_install[*]}"
-        sudo apt-get install -y "${to_install[@]}"
+        echo "installing: ${to_install[*]}"
+        flatpak install --noninteractive "${to_install[@]}"
     else
-        echo "All packages are already installed."
+        echo "all packages are already installed."
     fi
 }
 

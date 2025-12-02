@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-print_logo() {
+function print_logo() {
     command cat << "EOF"
    ██████╗ █████╗ ████████╗ █████╗ ██╗  ██╗   ██╗███████╗████████╗
   ██╔════╝██╔══██╗╚══██╔══╝██╔══██╗██║  ╚██╗ ██╔╝██╔════╝╚══██╔══╝
@@ -143,10 +143,22 @@ echo "Installing nerd fonts..."
 install_fonts "${NERD_FONTS[@]}"
 
 echo "Configuring flatpaks..."
-[[ -f ./install-flatpak.sh ]] && source ./install-flatpak.sh
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+echo "Installing flatpaks..."
+install_flatpak "${FLATPAKS[@]}"
 
 echo "Installing remote managment software..."
-[[ -f ./install-remote.sh ]] && source ./install-remote.sh
+[[ -f ./remote.sh ]] && source ./remote.sh
+
+echo "Installing wezterm..."
+[[ -f ./wezterm.sh ]] && source ./wezterm.sh
+
+echo "Installing alacritty..."
+[[ -f ./alacritty.sh ]] && source ./alacritty.sh
+
+echo "Installing arduino..."
+[[ -f ./arduino.sh ]] && source ./arduino.sh
 
 echo "Installing signal..."
 [[ -f ./signal.sh ]] && source ./signal.sh

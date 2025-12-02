@@ -2,13 +2,6 @@
 
 builddir=$(pwd)
 
-# Function to clone repositories
-function git_clone() {
-    local repo="$1"
-    local dest="$2"
-    [[ -d "$dest" ]] || git clone --depth=1 "$repo" "$dest"
-}
-
 echo "Cloning repositories..."
 git_clone https://github.com/bayasdev/envycontrol.git ~/Github/envycontrol
 git_clone https://github.com/indyleo/scripts.git ~/.local/scripts
@@ -55,12 +48,8 @@ sudo make install
 
 echo "Installing nvim..."
 cd ~/.local/scripts
-./bob install
-cd "$builddir"
-
-echo "Installing nvim..."
-cd ~/.local/scripts
-./bob install
+./bob.py install
+./bob.py install nightly
 cd "$builddir"
 
 echo "Installing rust..."

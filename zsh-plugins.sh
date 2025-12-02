@@ -1,11 +1,5 @@
 #!/bin/env bash
 
-git_clone() {
-    local repo="$1"
-    local dest="$2"
-    [[ -d "$dest" ]] || git clone --depth=1 "$repo" "$dest"
-}
-
 PLUGINS_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/zplugins"
 
 echo "Cloning zsh plugins"
