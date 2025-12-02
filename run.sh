@@ -191,14 +191,7 @@ echo "Setting up UFW..."
 [[ -f ./ufw.sh ]] && source ./ufw.sh
 
 echo "Configuring services..."
-for service in "${SERVICES[@]}"; do
-    if ! systemctl is-enabled "$service" &> /dev/null; then
-        echo "Enabling $service..."
-        sudo systemctl enable "$service"
-    else
-        echo "$service is already enabled"
-    fi
-done
+enable_services "${SERVICES[@]}"
 
 echo "Installing ultrakill grub theme..."
 wget -O- https://github.com/YouStones/ultrakill-revamp-grub-theme/raw/main/install.sh | bash -s -- --lang English

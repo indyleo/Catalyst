@@ -32,7 +32,9 @@ chsh -s "$(which zsh)" "$USER"
 
 # Tailscale Setup
 
-tailscale up --ssh --operator=$USER
+```bash
+tailscale up --ssh --operator="$USER"
+```
 
 # Piper Reminder
 

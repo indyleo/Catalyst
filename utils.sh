@@ -111,6 +111,20 @@ function create_directories() {
     touch ~/.cache/history-zsh
 }
 
+# Function to enable services
+function enable_services() {
+    local services=("$@")
+
+    for service in "${services[@]}"; do
+        if ! systemctl is-enabled "$service" &> /dev/null; then
+            echo "Enabling $service..."
+            sudo systemctl enable "$service"
+        else
+            echo "$service is already enabled"
+        fi
+    done
+}
+
 # Function to clone repositories
 function git_clone() {
     local repo="$1"
