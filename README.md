@@ -2,12 +2,11 @@
 
 Catalyst is for [Debian 13](https://www.debian.org/) may be expanded at some point for archlinux.
 
-# How to use
+# How to install
 
 ```bash
 git clone https://github.com/indyleo/Catalyst.git
 cd Catalyst
-git checkout less-powerd
 ./run.sh
 ```
 
@@ -25,6 +24,12 @@ chsh -s "$(which zsh)" "$USER"
 
 # Tailscale Setup
 
-tailscale up --operator=$USER
+```bash
+tailscale up --ssh --operator="$USER"
+```
 
-![Peek 2025-04-12 19-33](https://github.com/user-attachments/assets/21c9168d-0e4f-413a-9306-75168a0655f3)
+# Piper Reminder
+
+If you want to change your mouse setting (only if you have a logitech mouse) you need to plug it in to your computer with a cable, you cant just do it wireless.
+
+![Peek 2025-04-12 19-33](https://github.com/user-attachments/assets/75ccd3a4-b78e-4329-9e5d-4f82053fe187)

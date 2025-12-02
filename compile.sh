@@ -2,20 +2,14 @@
 
 builddir=$(pwd)
 
-# Function to clone repositories
-function git_clone() {
-    local repo="$1"
-    local dest="$2"
-    [[ -d "$dest" ]] || git clone --depth=1 "$repo" "$dest"
-}
-
 echo "Cloning repositories..."
+git_clone https://github.com/bayasdev/envycontrol.git ~/Github/envycontrol
 git_clone https://github.com/indyleo/scripts.git ~/.local/scripts
 git_clone https://github.com/jesseduffield/lazygit.git ~/Github/lazygit
 git_clone https://github.com/ayn2op/discordo ~/Github/discordo
+git_clone https://github.com/tsujan/Kvantum.git ~/Github/Kvantum
 git_clone https://codeberg.org/AnErrupTion/ly.git ~/Github/ly
 git_clone https://github.com/DavidBuchanan314/fusee-nano.git ~/Github/fusee-nano
-git_clone https://github.com/tsujan/Kvantum.git ~/Github/Kvantum
 git_clone https://github.com/mwh/dragon.git ~/Github/dragon
 git_clone https://git.dayanhub.com/sagi/subsonic-tui.git ~/Github/subsonic-tui
 
@@ -54,7 +48,8 @@ sudo make install
 
 echo "Installing nvim..."
 cd ~/.local/scripts
-./bob install
+./bob.py install
+./bob.py install nightly
 cd "$builddir"
 
 echo "Installing rust..."
@@ -70,12 +65,18 @@ cargo install caligula
 echo "Installing espanso..."
 tag_esp=$(git ls-remote --tags https://github.com/espanso/espanso.git | grep -o 'refs/tags/.*' | sed 's/refs\/tags\///' | grep -v '{}' | sort -V | tail -n 1)
 wget https://github.com/espanso/espanso/releases/download/${tag_esp}/espanso-debian-x11-amd64.deb -O espanso.deb
-sudo apt-get install ./espanso.deb -y
+sudo dpkg -i espanso.deb
 rm -fv espanso.deb
 espanso service register
 systemctl --user enable espanso.service
 cd "$builddir"
-rm -rfv build
+
+echo "Installing via-app..."
+tag_via=$(git ls-remote --tags https://github.com/the-via/releases | grep -o 'refs/tags/.*' | sed 's/refs\/tags\///' | grep -v '{}' | sort -V | tail -n 1)
+ver_via=$(echo "$tag_via" | sed 's/v//')
+wget "https://github.com/the-via/releases/releases/download/${tag_via}/via-${ver_via}-linux.deb" -O via-app.deb
+sudo dpkg -i via-app.deb
+rm -fv via-app.deb
 
 echo "Installing zig..."
 tag_zig=$(git ls-remote --tags https://github.com/ziglang/zig.git | grep -o 'refs/tags/.*' | sed 's/refs\/tags\///' | grep -v '{}' | sort -V | tail -n 1)
@@ -121,4 +122,3 @@ cd ~/Github/subsonic-tui
 make build
 make install
 cd "$builddir"
-

@@ -1,10 +1,5 @@
 #!/bin/env bash
 ORIGINAL_DIR=$(pwd)
-git_clone() {
-    local repo="$1"
-    local dest="$2"
-    [[ -d "$dest" ]] || git clone --depth=1 "$repo" "$dest"
-}
 
 echo "Downloading Wallpapers..."
 git_clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/

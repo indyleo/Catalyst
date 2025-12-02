@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-print_logo() {
+function print_logo() {
     command cat << "EOF"
    ██████╗ █████╗ ████████╗ █████╗ ██╗  ██╗   ██╗███████╗████████╗
   ██╔════╝██╔══██╗╚══██╔══╝██╔══██╗██║  ╚██╗ ██╔╝██╔════╝╚══██╔══╝
@@ -82,8 +82,8 @@ install_packages "${TERMINAL_FUN[@]}"
 echo "Installing system tools..."
 install_packages "${SYSTEM_TOOLS[@]}"
 
-# echo "Installing dev tools..."
-# install_packages "${NVIDIA_TOOLS[@]}"
+echo "Installing dev tools..."
+install_packages "${NVIDIA_TOOLS[@]}"
 
 echo "Installing dev packages..."
 install_packages "${DEV_GENERAL[@]}"
@@ -127,8 +127,8 @@ install_packages "${FONTS[@]}"
 echo "Installing gui utils..."
 install_packages "${GUI_UTILS[@]}"
 
-# echo "Installing input utils..."
-# install_packages "${INPUT_UTILS[@]}"
+echo "Installing input utils..."
+install_packages "${INPUT_UTILS[@]}"
 
 echo "Installing script dialogs..."
 install_packages "${SCRIPT_DIALOGS[@]}"
@@ -143,10 +143,22 @@ echo "Installing nerd fonts..."
 install_fonts "${NERD_FONTS[@]}"
 
 echo "Configuring flatpaks..."
-[[ -f ./install-flatpak.sh ]] && source ./install-flatpak.sh
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+echo "Installing flatpaks..."
+install_flatpak "${FLATPAKS[@]}"
 
 echo "Installing remote managment software..."
-[[ -f ./install-remote.sh ]] && source ./install-remote.sh
+[[ -f ./remote.sh ]] && source ./remote.sh
+
+echo "Installing wezterm..."
+[[ -f ./wezterm.sh ]] && source ./wezterm.sh
+
+echo "Installing alacritty..."
+[[ -f ./alacritty.sh ]] && source ./alacritty.sh
+
+echo "Installing arduino..."
+[[ -f ./arduino.sh ]] && source ./arduino.sh
 
 echo "Installing signal..."
 [[ -f ./signal.sh ]] && source ./signal.sh
@@ -169,9 +181,6 @@ echo "Downloading Themes..."
 echo "Configuring zsh plugins..."
 [[ -f ./zsh-plugins.sh ]] && source ./zsh-plugins.sh
 
-# # Add user to libvirt group
-# sudo usermod -aG libvirt "$(whoami)"
-
 echo "Installing tailscale..."
 [[ -f ./tailscale.sh ]] && source ./tailscale.sh
 
@@ -179,14 +188,7 @@ echo "Setting up UFW..."
 [[ -f ./ufw.sh ]] && source ./ufw.sh
 
 echo "Configuring services..."
-for service in "${SERVICES[@]}"; do
-    if ! systemctl is-enabled "$service" &> /dev/null; then
-        echo "Enabling $service..."
-        sudo systemctl enable "$service"
-    else
-        echo "$service is already enabled"
-    fi
-done
+enable_services "${SERVICES[@]}"
 
 echo "Installing ultrakill grub theme..."
 wget -O- https://github.com/YouStones/ultrakill-revamp-grub-theme/raw/main/install.sh | bash -s -- --lang English
