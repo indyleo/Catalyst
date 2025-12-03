@@ -5,11 +5,15 @@ echo "Downloading Wallpapers..."
 git_clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
 
 echo "Cursor Theme's"
-mkdir -vp ~/.local/share/icons
+mkdir -vp ~/.local/share/icons ~/.icons
 namer_capitaine=$(curl -s https://api.github.com/repos/sainnhe/capitaine-cursors/releases/latest | jq -r .name)
 wget "https://github.com/sainnhe/capitaine-cursors/releases/download/${namer_capitaine}/Linux.zip" -O Cursors.zip
 unzip Cursors.zip -d ~/.local/share/icons
 rm -fv Cursors.zip
+cd "$original_dir"
+ln -s ~/.local/share/icons/default ~/.icons/
+ln -s ~/.local/share/icons/capitaine\ cursors\ \(nord\) ~/.icons/
+ln -s ~/.local/share/icons/capitaine\ cursors\ \(gruvbox\) ~/.icons/
 
 echo "Nord Icon Theme"
 wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.local/share/icons" sh
