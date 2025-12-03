@@ -12,16 +12,26 @@ git_clone https://codeberg.org/AnErrupTion/ly.git ~/Github/ly
 git_clone https://github.com/DavidBuchanan314/fusee-nano.git ~/Github/fusee-nano
 git_clone https://github.com/mwh/dragon.git ~/Github/dragon
 git_clone https://git.dayanhub.com/sagi/subsonic-tui.git ~/Github/subsonic-tui
+git_clone https://github.com/XPhyro/lf-sixel.git ~/Github/lf-sixel
 
 echo "Installing go tools..."
 go install github.com/doronbehar/pistol/cmd/pistol@latest
 go install github.com/charmbracelet/glow@latest
 go install github.com/walles/moar@latest
+
+echo "Installing lazygit..."
 cd ~/Github/lazygit
 go install
 cd "$builddir"
+
+echo "Installing discordo..."
 cd ~/Github/discordo
 go install
+cd "$builddir"
+
+echo "Installing lf-sixel..."
+cd ~/Github/lf-sixel
+env CGO_ENABLED=0 go install -ldflags="-s -w" github.com/horriblename/lf@latest
 cd "$builddir"
 
 echo "Installing lua linter..."
