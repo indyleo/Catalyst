@@ -34,7 +34,6 @@ cd ~/Github/lf-sixel
 env CGO_ENABLED=0 go install -ldflags="-s -w" github.com/horriblename/lf@latest
 cd "$builddir"
 
-
 echo "Installing lua linter..."
 sudo luarocks install luacheck
 
