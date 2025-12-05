@@ -30,7 +30,6 @@ source ./utils.sh
 echo "Creating directories..."
 create_directories
 
-
 # Check if the package.conf file exists
 if [[ ! -f ./package.conf ]]; then
     echo "package.conf file not found. Exiting."
@@ -149,46 +148,43 @@ echo "Installing flatpaks..."
 install_flatpak "${FLATPAKS[@]}"
 
 echo "Installing remote managment software..."
-[[ -f ./remote.sh ]] && source ./remote.sh
+check_source ./remote.sh
 
-echo "Installing wezterm..."
-[[ -f ./wezterm.sh ]] && source ./wezterm.sh
-
-echo "Installing alacritty..."
-[[ -f ./alacritty.sh ]] && source ./alacritty.sh
+echo "Installing wezterm & alacritty..."
+check_source ./terminal.sh
 
 echo "Installing arduino..."
-[[ -f ./arduino.sh ]] && source ./arduino.sh
+check_source ./arduino.sh
 
 echo "Installing signal..."
-[[ -f ./signal.sh ]] && source ./signal.sh
+check_source ./signal.sh
 
 echo "Installing syncthing..."
-[[ -f ./syncthing.sh ]] && source ./syncthing.sh
+check_source ./syncthing.sh
 
-echo "Compiling..."
-[[ -f ./compile.sh ]] && source ./compile.sh
+echo "Compiling apps..."
+check_source ./compile.sh
 
 echo "Dot files..."
-[[ -f ./dots.sh ]] && source ./dots.sh
+check_source ./dotfiles.sh
 
 echo "Suckless Tools..."
-[[ -f ./suckless.sh ]] && source ./suckless.sh
+check_source ./suckless.sh
 
 echo "Downloading Themes..."
-[[ -f ./themer.sh ]] && source ./themer.sh
+check_source ./themes.sh
 
 echo "Configuring zsh plugins..."
-[[ -f ./zsh-plugins.sh ]] && source ./zsh-plugins.sh
+check_source ./zsh-plugins.sh
 
 # Add user to libvirt group
 sudo usermod -aG libvirt "$(whoami)"
 
 echo "Installing tailscale..."
-[[ -f ./tailscale.sh ]] && source ./tailscale.sh
+check_source ./tailscale.sh
 
 echo "Setting up UFW..."
-[[ -f ./ufw.sh ]] && source ./ufw.sh
+check_source ./ufw.sh
 
 echo "Configuring services..."
 enable_services "${SERVICES[@]}"
