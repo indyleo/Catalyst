@@ -132,3 +132,8 @@ function git_clone() {
     [[ -d "$dest" ]] || git clone --depth=1 "$repo" "$dest"
 }
 
+# Function to check and then source a file
+function check_source() {
+    local file="$1"
+    [[ -f "$file" ]] && source "$file"
+}
