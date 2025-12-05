@@ -175,7 +175,7 @@ echo "Downloading Themes..."
 check_source ./themes.sh
 
 echo "Configuring zsh plugins..."
-check_source ./zsh.sh
+check_source ./zsh-plugins.sh
 
 echo "Installing tailscale..."
 check_source ./tailscale.sh
