@@ -143,7 +143,7 @@ echo "Installing nerd fonts..."
 install_fonts "${NERD_FONTS[@]}"
 
 echo "Configuring flatpaks..."
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 echo "Installing flatpaks..."
 install_flatpak "${FLATPAKS[@]}"
