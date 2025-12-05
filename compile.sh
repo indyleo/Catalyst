@@ -49,6 +49,9 @@ sudo npm install -g @bitwarden/cli
 echo "Installing adblock..."
 pip install adblock --break-system-packages
 
+echo "Installing oh-my-posh..."
+curl -s https://ohmyposh.dev/install.sh | bash -s
+
 echo "Installing kvantum..."
 cd ~/Github/Kvantum/Kvantum
 mkdir build && cd build
