@@ -45,7 +45,7 @@ function install_flatpak() {
 
     if [ ${#to_install[@]} -ne 0 ]; then
         echo "installing: ${to_install[*]}"
-        flatpak install --noninteractive "${to_install[@]}"
+        flatpak install --user --noninteractive "${to_install[@]}"
     else
         echo "all packages are already installed."
     fi
