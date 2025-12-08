@@ -177,9 +177,6 @@ check_source ./themes.sh
 echo "Configuring zsh plugins..."
 check_source ./zsh-plugins.sh
 
-# Add user to libvirt group
-sudo usermod -aG libvirt "$(whoami)"
-
 echo "Installing tailscale..."
 check_source ./tailscale.sh
 
@@ -197,6 +194,7 @@ sudo usermod -s "$(which zsh)" "$USER"
 
 echo "Setting up groups..."
 sudo usermod -a -G dialout "$USER"
+sudo usermod -aG libvirt "$(whoami)"
 
 echo "System setup complete!"
 echo "Please reboot your system to apply changes."
