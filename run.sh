@@ -195,5 +195,8 @@ wget -O- https://github.com/YouStones/ultrakill-revamp-grub-theme/raw/main/insta
 echo "Setting zsh as default shell..."
 sudo usermod -s "$(which zsh)" "$USER"
 
+echo "Setting up groups..."
+sudo usermod -a -G dialout "$USER"
+
 echo "System setup complete!"
 echo "Please reboot your system to apply changes."
