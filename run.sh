@@ -194,7 +194,7 @@ sudo usermod -s "$(which zsh)" "$USER"
 
 echo "Setting up groups..."
 sudo usermod -a -G dialout "$USER"
-sudo usermod -aG libvirt "$(whoami)"
+sudo usermod -aG libvirt "$USER"
 
 echo "System setup complete!"
 echo "Please reboot your system to apply changes."
