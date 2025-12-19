@@ -153,6 +153,9 @@ check_source ./remote.sh
 echo "Installing wezterm & alacritty..."
 check_source ./terminal.sh
 
+echo "Installing Feishin..."
+check_source ./music.sh
+
 echo "Installing arduino..."
 check_source ./arduino.sh
 
