@@ -56,6 +56,9 @@ install_packages "${ALL[@]}"
 echo "Setting tailscale..."
 sudo tailscale set --operator="$USER" --ssh
 
+echo "Sunshine wayland stuff..."
+sudo setcap cap_sys_admin+p "$(readlink -f "$(which sunshine)")"
+
 echo "Configuring flatpaks..."
 flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
