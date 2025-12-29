@@ -87,7 +87,6 @@ echo "Setting zsh as default shell..."
 sudo usermod -s "$(which zsh)" "$USER"
 
 echo "Setting up groups..."
-sudo usermod -aG dialout "$USER"
 sudo usermod -aG libvirt "$USER"
 
 echo "System setup complete!"
