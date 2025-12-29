@@ -69,7 +69,7 @@ function enable_services() {
     for service in "${services[@]}"; do
         if ! systemctl is-enabled "$service" &> /dev/null; then
             echo "Enabling $service..."
-            sudo systemctl enable "$service"
+            sudo systemctl enable --now "$service"
         else
             echo "$service is already enabled"
         fi

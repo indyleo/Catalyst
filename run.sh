@@ -53,9 +53,6 @@ check_source ./yay.sh
 echo "Installing all packages..."
 install_packages "${ALL[@]}"
 
-echo "Setting tailscale..."
-sudo tailscale set --operator="$USER" --ssh
-
 echo "Sunshine wayland stuff..."
 sudo setcap cap_sys_admin+p "$(readlink -f "$(which sunshine)")"
 
@@ -82,6 +79,9 @@ check_source ./ufw.sh
 
 echo "Configuring services..."
 enable_services "${SERVICES[@]}"
+
+echo "Setting tailscale..."
+sudo tailscale set --operator="$USER" --ssh
 
 echo "Setting zsh as default shell..."
 sudo usermod -s "$(which zsh)" "$USER"
