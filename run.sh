@@ -66,7 +66,7 @@ echo "Compiling apps..."
 check_source ./compile.sh
 
 echo "Dot files..."
-check_source ./dotfiles.sh
+check_source ./dots.sh
 
 echo "Downloading Themes..."
 check_source ./themes.sh
