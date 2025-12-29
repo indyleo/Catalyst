@@ -69,7 +69,7 @@ echo "Dot files..."
 check_source ./dots.sh
 
 echo "Downloading Themes..."
-check_source ./themes.sh
+check_source ./themer.sh
 
 echo "Configuring zsh plugins..."
 check_source ./zsh-plugins.sh
