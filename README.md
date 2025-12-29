@@ -7,6 +7,7 @@ Catalyst is for [Arch Linux](https://www.archlinux.org/download/).
 ```bash
 git clone https://github.com/indyleo/Catalyst.git
 cd Catalyst
+git checkout nvidia
 ./run.sh
 ```
 
