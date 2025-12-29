@@ -16,7 +16,11 @@ echo "Installing protonup..."
 pipx install protonup
 
 echo "Installing subsonic-tui..."
-cd ~/Github/subsonic-tui
-make build
-make install
-cd "$builddir"
+if ! command -v subsonic-tui &> /dev/null; then
+    cd ~/Github/subsonic-tui
+    make build
+    make install
+    cd "$builddir"
+else
+    echo "subsonic-tui is already installed"
+fi
