@@ -62,8 +62,19 @@ flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flath
 echo "Installing flatpaks..."
 install_flatpak "${FLATPAKS[@]}"
 
-echo "Compiling apps..."
-check_source ./compile.sh
+echo "compiling apps..."
+
+echo "cloning repositories..."
+git_clone https://github.com/indyleo/scripts.git ~/.local/scripts
+
+echo "installing lua linter..."
+sudo luarocks install luacheck
+
+echo "installing spotdl..."
+pipx install spotdl
+
+echo "installing protonup..."
+pipx install protonup
 
 echo "Dot files..."
 check_source ./dots.sh
