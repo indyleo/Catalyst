@@ -66,6 +66,7 @@ echo "compiling apps..."
 
 echo "cloning repositories..."
 git_clone https://github.com/indyleo/scripts.git ~/.local/scripts
+git_clone https://git.dayanhub.com/sagi/subsonic-tui.git ~/Github/subsonic-tui
 
 echo "installing lua linter..."
 sudo luarocks install luacheck
@@ -75,6 +76,13 @@ pipx install spotdl
 
 echo "installing protonup..."
 pipx install protonup
+
+echo "Installing subsonic-tui..."
+builddir="$(pwd)"
+cd ~/Github/subsonic-tui
+make build
+make install
+cd "$builddir"
 
 echo "Dot files..."
 check_source ./dots.sh
