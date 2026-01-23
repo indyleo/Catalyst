@@ -62,19 +62,19 @@ flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flath
 echo "Installing flatpaks..."
 install_flatpak "${FLATPAKS[@]}"
 
-echo "compiling apps..."
+echo "Compiling apps..."
 
-echo "cloning repositories..."
+echo "Cloning repositories..."
 git_clone https://github.com/indyleo/scripts.git ~/.local/scripts
 git_clone https://git.dayanhub.com/sagi/subsonic-tui.git ~/Github/subsonic-tui
 
-echo "installing lua linter..."
+echo "Installing lua linter..."
 sudo luarocks install luacheck
 
-echo "installing spotdl..."
+echo "Installing spotdl..."
 pipx install spotdl
 
-echo "installing protonup..."
+echo "Installing protonup..."
 pipx install protonup
 
 echo "Installing subsonic-tui..."
@@ -83,6 +83,16 @@ cd ~/Github/subsonic-tui
 make build
 make install
 cd "$builddir"
+
+echo "Installing TerraMap..."
+mkdir -pv ~/.local/bin ~/.local/share/applications
+builddir="$(pwd)"
+cd ~/Applications
+npx nativefier --name "TerraMap" --internal-urls ".*" "https://terramap.github.io/"
+ln -sf ~/Applications/TerraMap-linux-x64/TerraMap ~/.local/bin/TerraMap
+cd "$builddir"
+cp -rf ./TerraMap.desktop ~/.local/share/applications/
+cp -rf ./TerraMap.png ~/.local/share/icons/TerraMap.png
 
 echo "Dot files..."
 check_source ./dots.sh

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=TerraMap
+Comment=Terraria Map Viewer
+Exec=TerraMap
+Icon=TerraMap
+Categories=Game;Utility;
