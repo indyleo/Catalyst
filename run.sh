@@ -56,6 +56,10 @@ install_packages "${ALL[@]}"
 echo "Sunshine wayland stuff..."
 sudo setcap cap_sys_admin+p "$(readlink -f "$(which sunshine)")"
 
+echo "Installing hyprsplit..."
+hyprpm update
+hyprpm add https://github.com/shezdy/hyprsplit
+
 echo "Configuring flatpaks..."
 flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
