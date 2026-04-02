@@ -81,6 +81,14 @@ pipx install spotdl
 echo "Installing protonup..."
 pipx install protonup
 
+echo "Installing claude code..."
+curl -fsSL https://claude.ai/install.sh | bash
+
+echo "Installing free claude code..."
+pipx install uv
+uv tool install git+https://github.com/Alishahryar1/free-claude-code.git
+fcc-init
+
 echo "Installing subsonic-tui..."
 builddir="$(pwd)"
 cd ~/Github/subsonic-tui
