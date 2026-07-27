@@ -82,8 +82,8 @@ curl -fsSL https://claude.ai/install.sh | bash
 
 echo "Installing free claude code..."
 pipx install uv
-uv tool install git+https://github.com/Alishahryar1/free-claude-code.git
-fcc-init
+~/.local/bin/uv tool install git+https://github.com/Alishahryar1/free-claude-code.git
+~/.local/bin/fcc-init
 
 echo "Installing subsonic-tui..."
 builddir="$(pwd)"
