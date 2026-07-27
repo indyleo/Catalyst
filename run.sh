@@ -89,7 +89,7 @@ hash -r
 uv tool install git+https://github.com/Alishahryar1/free-claude-code.git
 uv tool update-shell
 hash -r
-fcc-init
+"$HOME"/.local/share/uv/tools/free-claude-code/bin/fcc-init
 
 echo "Installing subsonic-tui..."
 builddir="$(pwd)"
