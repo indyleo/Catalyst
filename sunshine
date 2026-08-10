@@ -1,0 +1,4 @@
+[Sunshine]
+title=Sunshine Game Streaming
+description=Sunshine/Moonlight game streaming
+ports=47984/tcp|47989/tcp|47990/tcp|48010/tcp|47998/udp|47999/udp|48000/udp|48002/udp|48010/udp
