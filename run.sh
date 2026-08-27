@@ -61,6 +61,7 @@ echo "Installing flatpaks..."
 install_flatpak "${FLATPAKS[@]}"
 echo "Installing Withdrawal..."
 curl -sL https://raw.githubusercontent.com/dim-ghub/Withdrawal/refs/heads/main/install.sh | bash
+ln -sf ~/Withdrawal/main.py ~/.local/bin/withdrawal
 echo "Compiling apps..."
 echo "Cloning repositories..."
 git_clone https://github.com/indyleo/scripts.git ~/.local/scripts
