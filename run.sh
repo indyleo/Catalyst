@@ -132,5 +132,7 @@ fi
 
 echo "Setting up groups..."
 sudo usermod -aG libvirt "$USER"
+echo "Setting up udev rules..."
+check_source ./udev.sh
 echo "System setup complete!"
 echo "Please reboot your system to apply changes (shell and group changes require a new login)."
