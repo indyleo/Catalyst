@@ -11,4 +11,7 @@ cd gruvbox-kvantum-themes
 sudo mv -v Gruvbox* /usr/share/Kvantum/
 cd "$ORIGINAL_DIR"
 
+echo "Tell GTK4 / Libadwaita apps to prefer dark mode..."
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+
 echo "Done"
