@@ -98,15 +98,6 @@ make install
 cd "$builddir"
 hash -r
 
-echo "Installing TerraMap..."
-mkdir -pv ~/.local/bin ~/.local/share/applications ~/.local/share/icons
-builddir="$(pwd)"
-cd ~/Applications
-npx nativefier --name "TerraMap" --internal-urls ".*" "https://terramap.github.io/"
-ln -sf ~/Applications/TerraMap-linux-x64/TerraMap ~/.local/bin/TerraMap
-cd "$builddir"
-cp -rf ./TerraMap.desktop ~/.local/share/applications/
-cp -rf ./TerraMap.png ~/.local/share/icons/TerraMap.png
 echo "Dot files..."
 check_source ./dots.sh
 echo "Downloading Themes..."
