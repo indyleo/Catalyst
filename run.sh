@@ -44,7 +44,6 @@ if [[ -f ./pacman.conf ]]; then
 fi
 echo "Updating system..."
 sudo pacman -Syu
-# Installing yay
 echo "Installing yay..."
 check_source ./yay.sh
 echo "Installing all packages..."
@@ -65,15 +64,12 @@ git_clone https://github.com/indyleo/scripts.git ~/.local/scripts
 git_clone https://git.dayanhub.com/sagi/subsonic-tui.git ~/Github/subsonic-tui
 echo "Installing lua linter..."
 sudo luarocks install luacheck
-
 echo "Installing spotdl..."
 pipx install spotdl
 hash -r
-
 echo "Installing protonup..."
 pipx install protonup
 hash -r
-
 echo "Installing claude code..."
 curl -fsSL https://claude.ai/install.sh | bash
 hash -r
@@ -82,14 +78,12 @@ if command -v claude >/dev/null 2>&1; then
 else
     echo "claude not found on PATH after install — check install location."
 fi
-
 echo "Installing free claude code..."
 pipx install uv
 hash -r
 uv tool install git+https://github.com/Alishahryar1/free-claude-code.git
 uv tool update-shell
 hash -r
-
 echo "Installing subsonic-tui..."
 builddir="$(pwd)"
 cd ~/Github/subsonic-tui
@@ -97,7 +91,8 @@ make build
 make install
 cd "$builddir"
 hash -r
-
+echo "Installing repomix..."
+sudo npm install -g repomix
 echo "Dot files..."
 check_source ./dots.sh
 echo "Downloading Themes..."
