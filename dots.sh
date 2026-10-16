@@ -8,7 +8,7 @@ if ! command -v stow &> /dev/null; then
     exit 1
 fi
 
-cd ~/Github || exit
+cd ~/Projects || exit
 
 # Check if the repository already exists
 if [[ -d "$REPO_NAME" ]]; then
