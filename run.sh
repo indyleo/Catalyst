@@ -57,7 +57,6 @@ fi
 echo "Espanso wayland stuff..."
 if command -v espanso >/dev/null 2>&1; then
     sudo setcap cap_sys_admin+p "$(readlink -f "$(command -v espanso)")"
-    espanso service register
 else
     echo "espanso not found on PATH, skipping setcap."
 fi
