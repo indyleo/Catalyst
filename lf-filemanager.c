@@ -57,7 +57,7 @@ static void launch(const char *path) {
     snprintf(term, sizeof term, "%s", env);
   } else {
     const char *t = getenv("TERMINAL");
-    snprintf(term, sizeof term, "%s -e", t && *t ? t : "st");
+    snprintf(term, sizeof term, "%s -e", t && *t ? t : "alacritty");
   }
 
   char *argv[MAX_ARGS];
