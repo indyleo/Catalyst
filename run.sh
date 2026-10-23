@@ -107,8 +107,6 @@ echo "Configuring zsh plugins..."
 check_source ./zsh-plugins.sh
 echo "Setting up UFW..."
 check_source ./ufw.sh
-echo "Setting up lif as file picker..."
-check_source ./lf-picker.sh
 echo "Configuring services..."
 enable_services "${SERVICES[@]}"
 echo "Setting tailscale..."
