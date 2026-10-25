@@ -73,9 +73,6 @@ sudo luarocks install luacheck
 echo "Installing spotdl..."
 pipx install spotdl
 hash -r
-echo "Installing protonup..."
-pipx install protonup
-hash -r
 echo "Installing claude code..."
 curl -fsSL https://claude.ai/install.sh | bash
 hash -r
