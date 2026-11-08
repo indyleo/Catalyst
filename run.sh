@@ -96,6 +96,10 @@ cd "$builddir"
 hash -r
 echo "Installing repomix..."
 sudo npm install -g repomix
+hash -r
+echo "Installing Autin..."
+curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
+hash -r
 echo "Dot files..."
 check_source ./dots.sh
 echo "Downloading Themes..."
