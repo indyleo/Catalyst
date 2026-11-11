@@ -19,7 +19,6 @@ trap 'echo "Error occurred at line $LINENO"' ERR
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
 # Make sure ~/.local/bin is on PATH for the rest of this script
-# (pipx/uv/claude installers only update PATH for *future* shells via rc files)
 export PATH="$HOME/.local/bin:$PATH"
 
 # Check if utils is there
@@ -72,20 +71,6 @@ echo "Installing lua linter..."
 sudo luarocks install luacheck
 echo "Installing spotdl..."
 pipx install spotdl
-hash -r
-echo "Installing claude code..."
-curl -fsSL https://claude.ai/install.sh | bash
-hash -r
-if command -v claude >/dev/null 2>&1; then
-    echo "claude installed: $(claude --version)"
-else
-    echo "claude not found on PATH after install — check install location."
-fi
-echo "Installing free claude code..."
-pipx install uv
-hash -r
-uv tool install git+https://github.com/Alishahryar1/free-claude-code.git
-uv tool update-shell
 hash -r
 echo "Installing subsonic-tui..."
 builddir="$(pwd)"
