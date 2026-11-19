@@ -6,6 +6,8 @@ sudo ufw allow 443/tcp
 sudo ufw allow 3389/tcp
 sudo ufw allow 53317/tcp
 sudo ufw allow 53317/udp
+sudo ufw allow 9757
+sudo ufw allow 5353/udp
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 
