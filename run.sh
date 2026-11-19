@@ -97,14 +97,17 @@ echo "Configuring services..."
 enable_services "${SERVICES[@]}"
 echo "Setting tailscale..."
 sudo tailscale set --operator="$USER" --ssh
-
 echo "Setting zsh as default shell..."
 if command -v zsh >/dev/null 2>&1; then
     sudo usermod -s "$(command -v zsh)" "$USER"
 else
     echo "zsh not found on PATH, skipping shell change."
 fi
-
+echo "User Services..."
+if ! systemctl --user is-enabled wivrn.service &> /dev/null; then
+    echo "Enabling wivrn (user)..."
+    systemctl --user enable --now wivrn.service
+fi
 echo "Setting up groups..."
 sudo usermod -aG libvirt "$USER"
 echo "Setting up udev rules..."
